@@ -50,8 +50,6 @@
 #define kLineHeight                         (1 / [UIScreen mainScreen].scale)
 
 
-
-
 #pragma mark - 系统原生单例和StoryBoard -
 
 #define kApplication                        [UIApplication sharedApplication]
