@@ -102,6 +102,191 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		952049261C4F27EC001C4BB3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		952049271C4F27EC001C4BB3 /* Magazine */ = {
+			isa = PBXGroup;
+			children = (
+				952049281C4F27EC001C4BB3 /* Models */,
+				952049291C4F27EC001C4BB3 /* ViewControllers */,
+				9520492A1C4F27EC001C4BB3 /* Views */,
+			);
+			path = Magazine;
+			sourceTree = "<group>";
+		};
+		952049281C4F27EC001C4BB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		952049291C4F27EC001C4BB3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9520492A1C4F27EC001C4BB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9520492B1C4F27EC001C4BB3 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				9520492C1C4F27EC001C4BB3 /* Models */,
+				9520492D1C4F27EC001C4BB3 /* ViewControllers */,
+				9520492E1C4F27EC001C4BB3 /* Views */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		9520492C1C4F27EC001C4BB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9520492D1C4F27EC001C4BB3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9520492E1C4F27EC001C4BB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9520492F1C4F27EC001C4BB3 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				952049301C4F27EC001C4BB3 /* Models */,
+				952049311C4F27EC001C4BB3 /* ViewControllers */,
+				952049321C4F27EC001C4BB3 /* Views */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		952049301C4F27EC001C4BB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		952049311C4F27EC001C4BB3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		952049321C4F27EC001C4BB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		952049331C4F27EC001C4BB3 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				952049341C4F27EC001C4BB3 /* Models */,
+				952049351C4F27EC001C4BB3 /* ViewControllers */,
+				952049361C4F27EC001C4BB3 /* Views */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		952049341C4F27EC001C4BB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		952049351C4F27EC001C4BB3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		952049361C4F27EC001C4BB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		952049371C4F27EC001C4BB3 /* StoryBoard_Xib */ = {
+			isa = PBXGroup;
+			children = (
+				F4E341E51C4E69EE0094CAF6 /* Main.storyboard */,
+				F4E341EA1C4E69EE0094CAF6 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard_Xib;
+			sourceTree = "<group>";
+		};
+		952049381C4F27EC001C4BB3 /* Talent */ = {
+			isa = PBXGroup;
+			children = (
+				952049391C4F27EC001C4BB3 /* Models */,
+				9520493A1C4F27EC001C4BB3 /* ViewControllers */,
+				9520493B1C4F27EC001C4BB3 /* Views */,
+			);
+			path = Talent;
+			sourceTree = "<group>";
+		};
+		952049391C4F27EC001C4BB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9520493A1C4F27EC001C4BB3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9520493B1C4F27EC001C4BB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9520493C1C4F27EC001C4BB3 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		9520493D1C4F284B001C4BB3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		F4E341D01C4E69ED0094CAF6 = {
 			isa = PBXGroup;
 			children = (
@@ -127,14 +312,15 @@
 		F4E341DB1C4E69ED0094CAF6 /* LiangCang */ = {
 			isa = PBXGroup;
 			children = (
-				F4E341DF1C4E69EE0094CAF6 /* AppDelegate.h */,
-				F4E341E01C4E69EE0094CAF6 /* AppDelegate.m */,
-				F4E341E21C4E69EE0094CAF6 /* ViewController.h */,
-				F4E341E31C4E69EE0094CAF6 /* ViewController.m */,
-				F4E341E51C4E69EE0094CAF6 /* Main.storyboard */,
-				F4E341E81C4E69EE0094CAF6 /* Assets.xcassets */,
-				F4E341EA1C4E69EE0094CAF6 /* LaunchScreen.storyboard */,
-				F4E341ED1C4E69EE0094CAF6 /* Info.plist */,
+				9520493D1C4F284B001C4BB3 /* Category */,
+				952049261C4F27EC001C4BB3 /* Library */,
+				952049271C4F27EC001C4BB3 /* Magazine */,
+				9520492B1C4F27EC001C4BB3 /* Personal */,
+				9520492F1C4F27EC001C4BB3 /* Share */,
+				952049331C4F27EC001C4BB3 /* Shop */,
+				952049371C4F27EC001C4BB3 /* StoryBoard_Xib */,
+				952049381C4F27EC001C4BB3 /* Talent */,
+				9520493C1C4F27EC001C4BB3 /* Tool */,
 				F4E341DC1C4E69ED0094CAF6 /* Supporting Files */,
 			);
 			path = LiangCang;
@@ -143,6 +329,12 @@
 		F4E341DC1C4E69ED0094CAF6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4E341DF1C4E69EE0094CAF6 /* AppDelegate.h */,
+				F4E341E01C4E69EE0094CAF6 /* AppDelegate.m */,
+				F4E341E21C4E69EE0094CAF6 /* ViewController.h */,
+				F4E341E31C4E69EE0094CAF6 /* ViewController.m */,
+				F4E341E81C4E69EE0094CAF6 /* Assets.xcassets */,
+				F4E341ED1C4E69EE0094CAF6 /* Info.plist */,
 				F4E341DD1C4E69EE0094CAF6 /* main.m */,
 				F4B2631B1C4E840700599CF8 /* LiangCang-Prefix.pch */,
 				F4B2631C1C4E847200599CF8 /* System.h */,
@@ -393,6 +585,7 @@
 				F4E341E61C4E69EE0094CAF6 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		F4E341EA1C4E69EE0094CAF6 /* LaunchScreen.storyboard */ = {
@@ -401,6 +594,7 @@
 				F4E341EB1C4E69EE0094CAF6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
