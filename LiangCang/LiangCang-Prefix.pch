@@ -1,0 +1,17 @@
+//
+//  LiangCang-Prefix.pch
+//  LiangCang
+//
+//  Created by Mr.Xi on 16/1/19.
+//  Copyright © 2016年 Mr.Xi. All rights reserved.
+//
+
+#ifndef LiangCang_Prefix_pch
+#define LiangCang_Prefix_pch
+
+#import "System.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* LiangCang_Prefix_pch */
