@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95BD80101C55B5B70090D993 /* UIWindow+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */; };
+		95BD80161C55B7DE0090D993 /* LaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD80131C55B7DE0090D993 /* LaunchImage.m */; };
+		95BD80171C55B7DE0090D993 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD80151C55B7DE0090D993 /* LaunchViewController.m */; };
 		E6966CEA0CB03F85BE875122 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFF22DEFE71AA0A6EA1D94F /* libPods.a */; };
 		F4E341DE1C4E69EE0094CAF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E341DD1C4E69EE0094CAF6 /* main.m */; };
 		F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E341E01C4E69EE0094CAF6 /* AppDelegate.m */; };
@@ -39,6 +42,12 @@
 		3DFF22DEFE71AA0A6EA1D94F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		49569D8DE4D0BED16A2EBDF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		831C2FF701C66DAD790B6ECA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		95BD800E1C55B5B70090D993 /* UIWindow+Expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Expand.h"; sourceTree = "<group>"; };
+		95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Expand.m"; sourceTree = "<group>"; };
+		95BD80121C55B7DE0090D993 /* LaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchImage.h; sourceTree = "<group>"; };
+		95BD80131C55B7DE0090D993 /* LaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchImage.m; sourceTree = "<group>"; };
+		95BD80141C55B7DE0090D993 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		95BD80151C55B7DE0090D993 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 		F4B2631B1C4E840700599CF8 /* LiangCang-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LiangCang-Prefix.pch"; sourceTree = "<group>"; };
 		F4B2631C1C4E847200599CF8 /* System.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
 		F4E341D91C4E69ED0094CAF6 /* LiangCang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiangCang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,13 +111,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		952049261C4F27EC001C4BB3 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
 		952049271C4F27EC001C4BB3 /* Magazine */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,18 +151,39 @@
 			path = Shop;
 			sourceTree = "<group>";
 		};
-		9520493C1C4F27EC001C4BB3 /* Tool */ = {
+		95BD800B1C55B59B0090D993 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				95BD800E1C55B5B70090D993 /* UIWindow+Expand.h */,
+				95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		95BD800C1C55B59B0090D993 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		95BD800D1C55B59B0090D993 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				95BD80111C55B7DE0090D993 /* LaunchScreenPages */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		9520493D1C4F284B001C4BB3 /* Category */ = {
+		95BD80111C55B7DE0090D993 /* LaunchScreenPages */ = {
 			isa = PBXGroup;
 			children = (
+				95BD80121C55B7DE0090D993 /* LaunchImage.h */,
+				95BD80131C55B7DE0090D993 /* LaunchImage.m */,
+				95BD80141C55B7DE0090D993 /* LaunchViewController.h */,
+				95BD80151C55B7DE0090D993 /* LaunchViewController.m */,
 			);
-			path = Category;
+			path = LaunchScreenPages;
 			sourceTree = "<group>";
 		};
 		F4B2631D1C4FBC5400599CF8 /* StoryBoardXib */ = {
@@ -312,15 +335,15 @@
 		F4E341DB1C4E69ED0094CAF6 /* LiangCang */ = {
 			isa = PBXGroup;
 			children = (
+				95BD800B1C55B59B0090D993 /* Category */,
+				95BD800C1C55B59B0090D993 /* Library */,
+				95BD800D1C55B59B0090D993 /* Tool */,
 				952049271C4F27EC001C4BB3 /* Magazine */,
 				9520492B1C4F27EC001C4BB3 /* Personal */,
 				9520492F1C4F27EC001C4BB3 /* Share */,
 				952049331C4F27EC001C4BB3 /* Shop */,
 				F4B2632B1C4FBD8E00599CF8 /* Talent */,
 				F4B2631D1C4FBC5400599CF8 /* StoryBoardXib */,
-				9520493D1C4F284B001C4BB3 /* Category */,
-				952049261C4F27EC001C4BB3 /* Library */,
-				9520493C1C4F27EC001C4BB3 /* Tool */,
 				F4E341DC1C4E69ED0094CAF6 /* Supporting Files */,
 			);
 			path = LiangCang;
@@ -542,8 +565,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E341E41C4E69EE0094CAF6 /* ViewController.m in Sources */,
+				95BD80101C55B5B70090D993 /* UIWindow+Expand.m in Sources */,
 				F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */,
+				95BD80161C55B7DE0090D993 /* LaunchImage.m in Sources */,
 				F4E341DE1C4E69EE0094CAF6 /* main.m in Sources */,
+				95BD80171C55B7DE0090D993 /* LaunchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
