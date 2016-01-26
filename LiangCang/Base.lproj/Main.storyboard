@@ -70,9 +70,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="Xjt-9O-9ES"/>
                                     <constraint firstItem="S3v-po-Ejk" firstAttribute="top" secondItem="dIO-V5-Lns" secondAttribute="top" constant="20" id="cwN-el-gtm"/>
                                     <constraint firstItem="S3v-po-Ejk" firstAttribute="leading" secondItem="dIO-V5-Lns" secondAttribute="leading" constant="12" id="gil-AC-cYx"/>
+                                    <constraint firstAttribute="height" constant="64" id="njQ-cW-Qj7"/>
                                 </constraints>
                             </view>
                         </subviews>
