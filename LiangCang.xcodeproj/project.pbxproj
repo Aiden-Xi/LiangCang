@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952AD7131C579B8300BC5DDE /* NavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7121C579B8300BC5DDE /* NavBarView.xib */; };
+		952AD7181C579FCE00BC5DDE /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7151C579FCE00BC5DDE /* category.png */; };
+		952AD7191C579FCE00BC5DDE /* seach.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7161C579FCE00BC5DDE /* seach.png */; };
+		952AD71A1C579FCE00BC5DDE /* shop_cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7171C579FCE00BC5DDE /* shop_cat.png */; };
 		95BD80101C55B5B70090D993 /* UIWindow+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */; };
 		95BD80161C55B7DE0090D993 /* LaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD80131C55B7DE0090D993 /* LaunchImage.m */; };
 		95BD80171C55B7DE0090D993 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD80151C55B7DE0090D993 /* LaunchViewController.m */; };
@@ -42,6 +46,10 @@
 		3DFF22DEFE71AA0A6EA1D94F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		49569D8DE4D0BED16A2EBDF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		831C2FF701C66DAD790B6ECA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		952AD7121C579B8300BC5DDE /* NavBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBarView.xib; sourceTree = "<group>"; };
+		952AD7151C579FCE00BC5DDE /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
+		952AD7161C579FCE00BC5DDE /* seach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seach.png; sourceTree = "<group>"; };
+		952AD7171C579FCE00BC5DDE /* shop_cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_cat.png; sourceTree = "<group>"; };
 		95BD800E1C55B5B70090D993 /* UIWindow+Expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Expand.h"; sourceTree = "<group>"; };
 		95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Expand.m"; sourceTree = "<group>"; };
 		95BD80121C55B7DE0090D993 /* LaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchImage.h; sourceTree = "<group>"; };
@@ -151,6 +159,16 @@
 			path = Shop;
 			sourceTree = "<group>";
 		};
+		952AD7141C579F7F00BC5DDE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				952AD7151C579FCE00BC5DDE /* category.png */,
+				952AD7161C579FCE00BC5DDE /* seach.png */,
+				952AD7171C579FCE00BC5DDE /* shop_cat.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		95BD800B1C55B59B0090D993 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +209,7 @@
 			children = (
 				F4E341E51C4E69EE0094CAF6 /* Main.storyboard */,
 				F4E341EA1C4E69EE0094CAF6 /* LaunchScreen.storyboard */,
+				952AD7121C579B8300BC5DDE /* NavBarView.xib */,
 			);
 			path = StoryBoardXib;
 			sourceTree = "<group>";
@@ -352,6 +371,7 @@
 		F4E341DC1C4E69ED0094CAF6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				952AD7141C579F7F00BC5DDE /* Images */,
 				F4E341DF1C4E69EE0094CAF6 /* AppDelegate.h */,
 				F4E341E01C4E69EE0094CAF6 /* AppDelegate.m */,
 				F4E341E21C4E69EE0094CAF6 /* ViewController.h */,
@@ -489,8 +509,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952AD7131C579B8300BC5DDE /* NavBarView.xib in Resources */,
 				F4E341EC1C4E69EE0094CAF6 /* LaunchScreen.storyboard in Resources */,
 				F4E341E91C4E69EE0094CAF6 /* Assets.xcassets in Resources */,
+				952AD7181C579FCE00BC5DDE /* category.png in Resources */,
+				952AD71A1C579FCE00BC5DDE /* shop_cat.png in Resources */,
+				952AD7191C579FCE00BC5DDE /* seach.png in Resources */,
 				F4E341E71C4E69EE0094CAF6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

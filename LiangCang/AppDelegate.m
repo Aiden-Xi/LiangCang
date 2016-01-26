@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIWindow+Expand.h"
 
 @interface AppDelegate ()
 
@@ -16,15 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:kScreenBounds];
-    
-//    self.mainViewController = [[MainController alloc] init];
-//    
-//    self.window.rootViewController = self.mainViewController;
-//    [self.window makeKeyAndVisible];
-    
-    [self.window showLanuchPageAndSetUmeng];
-    
+
     return YES;
 }
 

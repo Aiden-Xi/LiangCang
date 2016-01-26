@@ -8,7 +8,7 @@
 
 #import "LaunchViewController.h"
 #import "MJExtension.h"
-#import "UIImageView+WebCache.h"
+//#import "UIImageView+WebCache.h"
 #import "LaunchImage.h"
 
 static CGFloat const animationDuration = 3.0;
@@ -44,35 +44,5 @@ static CGFloat const animationDuration = 3.0;
 
 #pragma mark - getter and setter
 
-- (UIImageView *)launchImage{
-    
-    if (_launchImage == nil) {
-        _launchImage = [[UIImageView alloc] initWithFrame:kScreenBounds];
-        _launchImage.image = [UIImage imageNamed:@"Default"];
-    }
-
-    return _launchImage;
-}
-
-- (UIImageView *)logoImage{
-    
-    if (_logoImage == nil) {
-        _logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(kWidth(95), kHeight(458), kWidth(128), kHeight(49))];
-        _logoImage.image = [UIImage imageNamed:@"Login_Logo"];
-    }
-    
-    return _logoImage;
-}
-
-- (UILabel *)imageTitle{
-    
-    if (_imageTitle == nil) {
-        _imageTitle = [[UILabel alloc] init];
-        _imageTitle.textColor = kWhiteColor;
-        _imageTitle.font = [UIFont systemFontOfSize:14];
-    }
-    
-    return _imageTitle;
-}
 
 @end
