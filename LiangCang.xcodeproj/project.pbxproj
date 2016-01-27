@@ -11,6 +11,8 @@
 		952AD7181C579FCE00BC5DDE /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7151C579FCE00BC5DDE /* category.png */; };
 		952AD7191C579FCE00BC5DDE /* seach.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7161C579FCE00BC5DDE /* seach.png */; };
 		952AD71A1C579FCE00BC5DDE /* shop_cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7171C579FCE00BC5DDE /* shop_cat.png */; };
+		95B35BAA1C58CD120057C143 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B35BA91C58CD120057C143 /* BaseViewController.m */; };
+		95B35BAD1C58CD2C0057C143 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B35BAC1C58CD2C0057C143 /* ShopViewController.m */; };
 		95BD80101C55B5B70090D993 /* UIWindow+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */; };
 		95BD80161C55B7DE0090D993 /* LaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD80131C55B7DE0090D993 /* LaunchImage.m */; };
 		95BD80171C55B7DE0090D993 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD80151C55B7DE0090D993 /* LaunchViewController.m */; };
@@ -50,6 +52,10 @@
 		952AD7151C579FCE00BC5DDE /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
 		952AD7161C579FCE00BC5DDE /* seach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seach.png; sourceTree = "<group>"; };
 		952AD7171C579FCE00BC5DDE /* shop_cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_cat.png; sourceTree = "<group>"; };
+		95B35BA81C58CD120057C143 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		95B35BA91C58CD120057C143 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		95B35BAB1C58CD2C0057C143 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		95B35BAC1C58CD2C0057C143 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
 		95BD800E1C55B5B70090D993 /* UIWindow+Expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Expand.h"; sourceTree = "<group>"; };
 		95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Expand.m"; sourceTree = "<group>"; };
 		95BD80121C55B7DE0090D993 /* LaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchImage.h; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				95BD80111C55B7DE0090D993 /* LaunchScreenPages */,
+				95B35BA81C58CD120057C143 /* BaseViewController.h */,
+				95B35BA91C58CD120057C143 /* BaseViewController.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -280,6 +288,8 @@
 		F4B263271C4FBD4200599CF8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				95B35BAB1C58CD2C0057C143 /* ShopViewController.h */,
+				95B35BAC1C58CD2C0057C143 /* ShopViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -588,11 +598,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B35BAD1C58CD2C0057C143 /* ShopViewController.m in Sources */,
 				F4E341E41C4E69EE0094CAF6 /* ViewController.m in Sources */,
 				95BD80101C55B5B70090D993 /* UIWindow+Expand.m in Sources */,
 				F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */,
 				95BD80161C55B7DE0090D993 /* LaunchImage.m in Sources */,
 				F4E341DE1C4E69EE0094CAF6 /* main.m in Sources */,
+				95B35BAA1C58CD120057C143 /* BaseViewController.m in Sources */,
 				95BD80171C55B7DE0090D993 /* LaunchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

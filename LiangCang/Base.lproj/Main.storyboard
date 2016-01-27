@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="-3665" y="-1364"/>
         </scene>
-        <!--View Controller-->
+        <!--Shop View Controller-->
         <scene sceneID="c9m-S4-hap">
             <objects>
-                <viewController id="eAd-PF-2nh" sceneMemberID="viewController">
+                <viewController id="eAd-PF-2nh" customClass="ShopViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z1c-5a-6lT"/>
                         <viewControllerLayoutGuide type="bottom" id="aoq-ZC-jcX"/>
@@ -60,19 +60,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3v-po-Ejk">
-                                        <rect key="frame" x="12" y="20" width="36" height="36"/>
+                                        <rect key="frame" x="12" y="27" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="4cq-Wp-vVC"/>
-                                            <constraint firstAttribute="height" constant="36" id="Qvd-tU-cY0"/>
+                                            <constraint firstAttribute="width" constant="30" id="4cq-Wp-vVC"/>
+                                            <constraint firstAttribute="height" constant="30" id="Qvd-tU-cY0"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="seach.png"/>
+                                        <connections>
+                                            <action selector="searchButtonClick:" destination="eAd-PF-2nh" eventType="touchUpInside" id="ItU-mK-Zic"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商店" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5d-L5-0RK">
+                                        <rect key="frame" x="195" y="30" width="210" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="YAu-YX-Cn3"/>
+                                            <constraint firstAttribute="height" constant="22" id="qy5-xX-Nua"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="S3v-po-Ejk" firstAttribute="top" secondItem="dIO-V5-Lns" secondAttribute="top" constant="20" id="cwN-el-gtm"/>
+                                    <constraint firstItem="N5d-L5-0RK" firstAttribute="centerX" secondItem="dIO-V5-Lns" secondAttribute="centerX" id="JSy-yJ-PmC"/>
+                                    <constraint firstItem="S3v-po-Ejk" firstAttribute="top" secondItem="dIO-V5-Lns" secondAttribute="top" constant="27" id="cwN-el-gtm"/>
                                     <constraint firstItem="S3v-po-Ejk" firstAttribute="leading" secondItem="dIO-V5-Lns" secondAttribute="leading" constant="12" id="gil-AC-cYx"/>
                                     <constraint firstAttribute="height" constant="64" id="njQ-cW-Qj7"/>
+                                    <constraint firstItem="N5d-L5-0RK" firstAttribute="top" secondItem="dIO-V5-Lns" secondAttribute="top" constant="30" id="oOE-MM-ofq"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -84,6 +99,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QK4-G6-hlY"/>
+                    <connections>
+                        <outlet property="navBarView" destination="dIO-V5-Lns" id="WaL-dH-Vgd"/>
+                        <outlet property="searchButton" destination="S3v-po-Ejk" id="bDn-dc-zSM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y8-wj-HZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
