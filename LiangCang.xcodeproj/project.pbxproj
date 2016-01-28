@@ -25,6 +25,7 @@
 		F4E341EC1C4E69EE0094CAF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E341EA1C4E69EE0094CAF6 /* LaunchScreen.storyboard */; };
 		F4E341F71C4E69EE0094CAF6 /* LiangCangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E341F61C4E69EE0094CAF6 /* LiangCangTests.m */; };
 		F4E342021C4E69EE0094CAF6 /* LiangCangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E342011C4E69EE0094CAF6 /* LiangCangUITests.m */; };
+		F4EE56EC1C58FB4400700DB4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EE56EB1C58FB4400700DB4 /* UIImage+Color.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		F4E341FD1C4E69EE0094CAF6 /* LiangCangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiangCangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E342011C4E69EE0094CAF6 /* LiangCangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiangCangUITests.m; sourceTree = "<group>"; };
 		F4E342031C4E69EE0094CAF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4EE56EA1C58FB4400700DB4 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		F4EE56EB1C58FB4400700DB4 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 			children = (
 				95BD800E1C55B5B70090D993 /* UIWindow+Expand.h */,
 				95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */,
+				F4EE56EA1C58FB4400700DB4 /* UIImage+Color.h */,
+				F4EE56EB1C58FB4400700DB4 /* UIImage+Color.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				F4E341DE1C4E69EE0094CAF6 /* main.m in Sources */,
 				95B35BAA1C58CD120057C143 /* BaseViewController.m in Sources */,
 				95BD80171C55B7DE0090D993 /* LaunchViewController.m in Sources */,
+				F4EE56EC1C58FB4400700DB4 /* UIImage+Color.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
