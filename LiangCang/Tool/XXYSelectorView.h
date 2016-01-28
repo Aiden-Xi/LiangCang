@@ -10,7 +10,7 @@
 
 @protocol XXYSelectorViewDelegate <NSObject>
 
-- (void)XXYSelectorViewClickFrom:(UIButton *)fromButton To:(UIButton *)ToButton;
+- (void)XXYSelectorViewClickFrom:(YunButton *)fromButton To:(YunButton *)ToButton;
 
 @end
 
@@ -21,7 +21,7 @@
 @property (nonatomic, weak) UIColor *titleSelectColor;
 @property (nonatomic, weak) UIColor *titleDefaultColor;
 @property (nonatomic, weak) UIColor *lineColor;
-@property (nonatomic, strong) UIButton *selectButton;
+@property (nonatomic, strong) YunButton *selectButton;
 
 @property (nonatomic, weak) id<XXYSelectorViewDelegate> delegate ;
 

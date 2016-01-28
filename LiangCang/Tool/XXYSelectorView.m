@@ -18,9 +18,6 @@
         self.defaultSelect = defaultSelect;
         self.lineColor = lineColor;
         
-        XXYLog(@"%@", _titleArray);
-        XXYLog(@"%ld", self.defaultSelect);
-        
         CGFloat buttonWidth = frame.size.width / self.titleArray.count;
         CGFloat buttonHeight = frame.size.height - 5;
         for (NSInteger i = 0; i < self.titleArray.count; i++) {
@@ -28,7 +25,7 @@
             CGFloat buttonY = 5;
             
             // 添加按钮
-            UIButton *selectButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight)];
+            YunButton *selectButton = [[YunButton alloc] initWithFrame:CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight)];
             
             selectButton.tag = i + 1;
             selectButton.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -67,11 +64,11 @@
     return self;
 }
 
-- (void)selectButtonAction:(UIButton *)sender {
+- (void)selectButtonAction:(YunButton *)sender {
     if (_selectButton.tag == sender.tag) return;
     
     // 将上级的选中按钮和选中下划线隐藏
-    UIButton *button = (UIButton *)_selectButton;
+    YunButton *button = (YunButton *)_selectButton;
     
     button.selected = NO;
     button.titleLabel.font = [UIFont systemFontOfSize:14];
