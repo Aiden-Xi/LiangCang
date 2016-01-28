@@ -11,6 +11,7 @@
 		952AD7181C579FCE00BC5DDE /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7151C579FCE00BC5DDE /* category.png */; };
 		952AD7191C579FCE00BC5DDE /* seach.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7161C579FCE00BC5DDE /* seach.png */; };
 		952AD71A1C579FCE00BC5DDE /* shop_cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 952AD7171C579FCE00BC5DDE /* shop_cat.png */; };
+		956B0C4B1C59A677003E6859 /* XXYSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 956B0C4A1C59A677003E6859 /* XXYSelectorView.m */; };
 		95B35BAA1C58CD120057C143 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B35BA91C58CD120057C143 /* BaseViewController.m */; };
 		95B35BAD1C58CD2C0057C143 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B35BAC1C58CD2C0057C143 /* ShopViewController.m */; };
 		95BD80101C55B5B70090D993 /* UIWindow+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD800F1C55B5B70090D993 /* UIWindow+Expand.m */; };
@@ -25,7 +26,7 @@
 		F4E341EC1C4E69EE0094CAF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E341EA1C4E69EE0094CAF6 /* LaunchScreen.storyboard */; };
 		F4E341F71C4E69EE0094CAF6 /* LiangCangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E341F61C4E69EE0094CAF6 /* LiangCangTests.m */; };
 		F4E342021C4E69EE0094CAF6 /* LiangCangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E342011C4E69EE0094CAF6 /* LiangCangUITests.m */; };
-		F4EE56EC1C58FB4400700DB4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EE56EB1C58FB4400700DB4 /* UIImage+Color.m */; settings = {ASSET_TAGS = (); }; };
+		F4EE56EC1C58FB4400700DB4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EE56EB1C58FB4400700DB4 /* UIImage+Color.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		952AD7151C579FCE00BC5DDE /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
 		952AD7161C579FCE00BC5DDE /* seach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seach.png; sourceTree = "<group>"; };
 		952AD7171C579FCE00BC5DDE /* shop_cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_cat.png; sourceTree = "<group>"; };
+		956B0C491C59A677003E6859 /* XXYSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXYSelectorView.h; sourceTree = "<group>"; };
+		956B0C4A1C59A677003E6859 /* XXYSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXYSelectorView.m; sourceTree = "<group>"; };
 		95B35BA81C58CD120057C143 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		95B35BA91C58CD120057C143 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		95B35BAB1C58CD2C0057C143 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				95BD80111C55B7DE0090D993 /* LaunchScreenPages */,
 				95B35BA81C58CD120057C143 /* BaseViewController.h */,
 				95B35BA91C58CD120057C143 /* BaseViewController.m */,
+				956B0C491C59A677003E6859 /* XXYSelectorView.h */,
+				956B0C4A1C59A677003E6859 /* XXYSelectorView.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -604,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95B35BAD1C58CD2C0057C143 /* ShopViewController.m in Sources */,
+				956B0C4B1C59A677003E6859 /* XXYSelectorView.m in Sources */,
 				F4E341E41C4E69EE0094CAF6 /* ViewController.m in Sources */,
 				95BD80101C55B5B70090D993 /* UIWindow+Expand.m in Sources */,
 				F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */,

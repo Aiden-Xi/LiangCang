@@ -10,7 +10,7 @@
 #import "Masonry.h"
 #import "UIImage+Color.h"
 
-@interface ShopViewController () <UISearchBarDelegate>
+@interface ShopViewController () <UISearchBarDelegate, XXYSelectorViewDelegate, UITabBarControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *searchButton;
 - (IBAction)searchButtonClick:(UIButton *)sender;
 
@@ -30,6 +30,9 @@
 
     // 创建搜索框控件
     [self createSearchBar];
+    
+    // 创建选择按钮视图
+    [self createSelectButtonView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,6 +68,13 @@
     [self setSearchTextFieldBackgroundColor:[UIColor blackColor]];
 }
 
+- (void)createSelectButtonView {
+    _selectView = [[XXYSelectorView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 35) titleArray:@[@"分类", @"品牌", @"首页", @"专题", @"礼物"] defaultSelect:2 backGroudColor:kDefaultColor lineColor:kDefaultWhiteColor];
+    _selectView.delegate = self;
+    
+    [self.view addSubview:_selectView];
+}
+
 #pragma mark - ButtonClick -
 
 - (IBAction)searchButtonClick:(UIButton *)sender {
@@ -80,11 +90,13 @@
 }
 
 - (IBAction)cacleButtonClick:(UIButton *)sender {
-    [self.searchBar resignFirstResponder];
-    self.searchBar.hidden = YES;
-    self.searchButton.hidden = NO;
-    self.navTitle.hidden = NO;
-    self.cacleButton.hidden = YES;
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.searchBar resignFirstResponder];
+        self.searchBar.hidden = YES;
+        self.searchButton.hidden = NO;
+        self.navTitle.hidden = NO;
+        self.cacleButton.hidden = YES;
+    }];
 }
 
 #pragma mark - UISearchDelegate -
@@ -104,6 +116,20 @@
     }
     
     searchTextField.backgroundColor = backgroundColor;
+}
+
+#pragma mark - XXYSelectButtonViewDelegate -
+
+- (void)XXYSelectorViewClickFrom:(UIButton *)fromButton To:(UIButton *)ToButton {
+    XXYLog(@"%ld---%ld", (long)fromButton.tag, (long)ToButton.tag);
+}
+
+#pragma mark - UITabBarControllerDelegate- 
+
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    tabBarController.viewDidLayoutSubviews;
+    
+    XXYLog(@"测试测试");
 }
 
 

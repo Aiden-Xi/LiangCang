@@ -49,6 +49,13 @@
 #define kScreenHeight                       ([[UIScreen mainScreen] bounds].size.height)
 #define kScreenSize                         CGSizeMake(kScreenWidth, kScreenHeight)
 #define kLineHeight                         (1 / [UIScreen mainScreen].scale)
+#define kDefaultColor                       COLOR(39, 40, 34, 1)
+#define kDefaultWhiteColor                  COLOR(255, 255, 255, 1)
+
+#define COLOR(r, g, b, a)                   [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:(a * 1.0)]
+
+#define ColorFromRGB(rgbValue)              [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define ColorWithAlphaFromRGB(rgbValue,a)              [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:a];
 
 
 #pragma mark - 系统原生单例和StoryBoard -

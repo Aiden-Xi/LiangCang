@@ -7,7 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "XXYSelectorView.h"
 
 @interface ShopViewController : BaseViewController
 
+@property (nonatomic, strong) XXYSelectorView *selectView;
 @end
