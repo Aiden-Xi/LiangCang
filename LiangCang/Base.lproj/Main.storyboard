@@ -106,6 +106,7 @@
                                         <state key="normal" image="cart.png"/>
                                         <connections>
                                             <action selector="catButtonAction:" destination="eAd-PF-2nh" eventType="touchUpInside" id="q4B-S6-ksc"/>
+                                            <segue destination="KUC-PA-Dw5" kind="push" identifier="cartPush" id="Qyf-pm-WLi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -142,6 +143,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y8-wj-HZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3022" y="-1364"/>
+        </scene>
+        <!--Cart View Controller-->
+        <scene sceneID="Om1-UV-fln">
+            <objects>
+                <viewController id="KUC-PA-Dw5" customClass="CartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6nq-49-tyJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ag4-D1-nQE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dpK-ai-wOV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fim-c3-HoI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddr-24-z9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2357" y="-1364"/>
         </scene>
         <!--Magazine View Controller-->
         <scene sceneID="cTV-4u-3Ru">

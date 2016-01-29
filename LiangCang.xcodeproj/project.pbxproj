@@ -57,7 +57,7 @@
 		F4EE56EF1C5A44B500700DB4 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EE56EE1C5A44B500700DB4 /* BaseTabBarController.m */; };
 		F4EE56F81C5A49BF00700DB4 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EE56F41C5A49BF00700DB4 /* category.png */; };
 		F4EE56F91C5A49BF00700DB4 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EE56F51C5A49BF00700DB4 /* search.png */; };
-		F4EE56FF1C5A505F00700DB4 /* CatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EE56FE1C5A505F00700DB4 /* CatViewController.m */; };
+		F4EE56FF1C5A505F00700DB4 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EE56FE1C5A505F00700DB4 /* CartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,8 +154,8 @@
 		F4EE56EE1C5A44B500700DB4 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		F4EE56F41C5A49BF00700DB4 /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
 		F4EE56F51C5A49BF00700DB4 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
-		F4EE56FD1C5A505F00700DB4 /* CatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatViewController.h; sourceTree = "<group>"; };
-		F4EE56FE1C5A505F00700DB4 /* CatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatViewController.m; sourceTree = "<group>"; };
+		F4EE56FD1C5A505F00700DB4 /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		F4EE56FE1C5A505F00700DB4 /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,8 +398,8 @@
 			children = (
 				95B35BAB1C58CD2C0057C143 /* ShopViewController.h */,
 				95B35BAC1C58CD2C0057C143 /* ShopViewController.m */,
-				F4EE56FD1C5A505F00700DB4 /* CatViewController.h */,
-				F4EE56FE1C5A505F00700DB4 /* CatViewController.m */,
+				F4EE56FD1C5A505F00700DB4 /* CartViewController.h */,
+				F4EE56FE1C5A505F00700DB4 /* CartViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -793,7 +793,7 @@
 				95B35BAD1C58CD2C0057C143 /* ShopViewController.m in Sources */,
 				F4CE41A91C5A51FD0078FBDA /* UIButton+TJButtom.m in Sources */,
 				F4CE41A71C5A51FD0078FBDA /* NSDictionary+safeObjectForKey.m in Sources */,
-				F4EE56FF1C5A505F00700DB4 /* CatViewController.m in Sources */,
+				F4EE56FF1C5A505F00700DB4 /* CartViewController.m in Sources */,
 				956B0C4B1C59A677003E6859 /* XXYSelectorView.m in Sources */,
 				95BD80101C55B5B70090D993 /* UIWindow+Expand.m in Sources */,
 				F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */,
