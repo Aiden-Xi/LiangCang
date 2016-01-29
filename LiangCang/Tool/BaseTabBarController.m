@@ -11,9 +11,6 @@
 @implementation BaseTabBarController
 
 - (void)viewDidLoad {
-    // 设置默认选中viewController
-    //    self.selectedViewController = self.viewControllers.lastObject;
-    
     // 设置tabbar背景颜色为黑色
     self.tabBar.barTintColor=kDefaultColor;
     
@@ -38,11 +35,11 @@
         viewController.tabBarItem.title = titleName[i];
         
         // 设置状态栏的整体偏移量 水平方向和垂直方向
-//        [viewController.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, 0)];
+        // [viewController.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, 0)];
         
         [viewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor lightGrayColor], NSForegroundColorAttributeName, kFontSizeFamily(12), NSFontAttributeName, nil] forState:UIControlStateNormal];
         
-        [viewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor orangeColor], NSForegroundColorAttributeName, kFontSizeFamily(12), NSFontAttributeName,nil] forState:UIControlStateSelected];
+        [viewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kDefaultWhiteColor, NSForegroundColorAttributeName, kFontSizeFamily(12), NSFontAttributeName,nil] forState:UIControlStateSelected];
     }
 }
 
