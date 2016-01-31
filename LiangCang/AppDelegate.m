@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    /// 注册各种库的使用
+    [self startRegisterDefault];
+    
     return YES;
 }
 
@@ -40,6 +43,19 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+/**
+ *  一些需要开始注册使用的库
+ */
+- (void)startRegisterDefault
+{
+    /// 需要使用的库，基本的注册（键盘处理库）
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = NO;
 }
 
 @end
