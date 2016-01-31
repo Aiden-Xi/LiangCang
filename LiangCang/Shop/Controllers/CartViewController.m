@@ -9,5 +9,8 @@
 #import "CartViewController.h"
 
 @implementation CartViewController
+- (IBAction)cartToShop:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

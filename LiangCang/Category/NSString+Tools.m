@@ -27,4 +27,18 @@
     return s;
 }
 
++ (NSString *)customDateToString {
+    // 获取当前时间
+    NSDate *date = [NSDate date];
+    XXYLog(@"当前日期是： %@", date);
+    
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"MMM.d"];
+    
+    NSString *timeString = [dateFormatter stringFromDate:date];
+    
+    
+    return timeString;
+}
+
 @end

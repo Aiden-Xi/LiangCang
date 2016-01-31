@@ -135,6 +135,8 @@
 }
 
 - (IBAction)catButtonAction:(UIButton *)sender {
+    // 隐藏状态栏
+//    self.navigationController
     
 }
 @end

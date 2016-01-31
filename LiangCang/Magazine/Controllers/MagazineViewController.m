@@ -23,6 +23,13 @@
 
 @implementation MagazineViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // 设置左上角当前时间
+    self.timeLabel.text = [NSString customDateToString];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -49,16 +56,11 @@
         if (_isOpen) {
             self.arrow.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.2, 1.2);
             _isOpen = NO;
-            XXYLog(@"-------放大");
-            XXYLog(@"-----大大%@", NSStringFromCGRect(self.arrow.frame));
         } else {
             self.arrow.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.8, 0.8);
             _isOpen = YES;
-            XXYLog(@"-------缩小");
-            XXYLog(@"-----小小%@", NSStringFromCGRect(self.arrow.frame));
         }
     }];
-
 }
 
 @end

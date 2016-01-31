@@ -76,7 +76,8 @@
 #define kAppDelegate                        (AppDelegate *)[UIApplication sharedApplication].delegate
 #define kUserDefaults                       [NSUserDefaults standardUserDefaults]
 #define kNotificationCenter                 [NSNotificationCenter defaultCenter]
-#define kLivingNoteStoryBoard               (UIStoryboard *)[UIStoryboard storyboardWithName:@"LivingNote" bundle:nil]
+
+#define kStoryBoard(name)               (UIStoryboard *)[UIStoryboard storyboardWithName:name bundle:nil]
 #define kLoginRegisterStoryBoard            (UIStoryboard *)[UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil]
 
 

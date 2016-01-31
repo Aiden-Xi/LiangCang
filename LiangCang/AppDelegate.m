@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "UIWindow+Expand.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-
     return YES;
 }
 
