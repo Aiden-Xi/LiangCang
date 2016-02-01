@@ -71,7 +71,7 @@
 }
 
 - (void)createSelectButtonView {
-    _selectView = [[XXYSelectorView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 30) titleArray:@[@"分类", @"品牌", @"首页", @"专题", @"礼物"] defaultSelect:2 backGroudColor:kDefaultColor lineColor:kDefaultWhiteColor];
+    _selectView = [[XXYSelectorView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 30) titleArray:@[@"分类", @"品牌", @"首页", @"专题", @"礼物"] defaultSelect:2 backGroudColor:kDefaultBackColor lineColor:kDefaultWhiteColor];
     _selectView.delegate = self;
     
     [self.view addSubview:_selectView];

@@ -33,7 +33,7 @@
     XXYLog(@"当前日期是： %@", date);
     
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"MMM.d"];
+    [dateFormatter setDateFormat:@"MMM.dd"];
     
     NSString *timeString = [dateFormatter stringFromDate:date];
     

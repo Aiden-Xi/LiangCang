@@ -8,7 +8,19 @@
 
 #import "CartViewController.h"
 
+@interface CartViewController ()
+
+@end
+
 @implementation CartViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidLoad {
+    self.view.backgroundColor = kDefaultBackColor;
+}
 - (IBAction)cartToShop:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
