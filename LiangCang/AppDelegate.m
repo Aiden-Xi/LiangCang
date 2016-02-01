@@ -16,7 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     /// 注册各种库的使用
     [self startRegisterDefault];
     
@@ -48,8 +47,7 @@
 /**
  *  一些需要开始注册使用的库
  */
-- (void)startRegisterDefault
-{
+- (void)startRegisterDefault {
     /// 需要使用的库，基本的注册（键盘处理库）
     IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
     manager.enable = YES;
