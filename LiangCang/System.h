@@ -58,6 +58,7 @@
 #define kScreenSize                         CGSizeMake(kScreenWidth, kScreenHeight)
 #define kLineHeight                         (1 / [UIScreen mainScreen].scale)
 #define kDefaultColor                       COLOR(39, 40, 34, 1)
+#define kDefaultBackColor                   COLOR(52, 54, 45, 1)
 #define kDefaultWhiteColor                  COLOR(255, 255, 255, 1)
 
 #define COLOR(r, g, b, a)                   [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:(a * 1.0)]
