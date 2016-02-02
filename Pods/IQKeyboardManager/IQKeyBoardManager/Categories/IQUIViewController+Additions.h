@@ -25,9 +25,13 @@
 
 @interface UIViewController (Additions)
 
+#ifdef NSFoundationVersionNumber_iOS_5_1
+
 /**
  Top/Bottom Layout constraint which help library to manage keyboardTextField distance
  */
-@property(nullable, nonatomic, strong) IBOutlet NSLayoutConstraint *IQLayoutGuideConstraint;
+@property(nonatomic, strong) IBOutlet NSLayoutConstraint *IQLayoutGuideConstraint;
+
+#endif
 
 @end

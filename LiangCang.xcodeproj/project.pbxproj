@@ -25,7 +25,6 @@
 		95B35BAA1C58CD120057C143 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B35BA91C58CD120057C143 /* BaseViewController.m */; };
 		95B35BAD1C58CD2C0057C143 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B35BAC1C58CD2C0057C143 /* ShopViewController.m */; };
 		E6966CEA0CB03F85BE875122 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFF22DEFE71AA0A6EA1D94F /* libPods.a */; };
-		F438E1FB1C5CF6B4004E37D3 /* LaunchSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F438E1FA1C5CF6B4004E37D3 /* LaunchSearchViewController.m */; };
 		F438E2011C5D0270004E37D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F438E2001C5D0270004E37D3 /* QuartzCore.framework */; };
 		F438E2031C5D0280004E37D3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F438E2021C5D0280004E37D3 /* MobileCoreServices.framework */; };
 		F438E2051C5D028D004E37D3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F438E2041C5D028D004E37D3 /* ImageIO.framework */; };
@@ -118,8 +117,6 @@
 		95B35BA91C58CD120057C143 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		95B35BAB1C58CD2C0057C143 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
 		95B35BAC1C58CD2C0057C143 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
-		F438E1F91C5CF6B4004E37D3 /* LaunchSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchSearchViewController.h; sourceTree = "<group>"; };
-		F438E1FA1C5CF6B4004E37D3 /* LaunchSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchSearchViewController.m; sourceTree = "<group>"; };
 		F438E2001C5D0270004E37D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F438E2021C5D0280004E37D3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F438E2041C5D028D004E37D3 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -357,8 +354,6 @@
 				956B0C4A1C59A677003E6859 /* XXYSelectorView.m */,
 				F4EE56ED1C5A44B500700DB4 /* BaseTabBarController.h */,
 				F4EE56EE1C5A44B500700DB4 /* BaseTabBarController.m */,
-				F438E1F91C5CF6B4004E37D3 /* LaunchSearchViewController.h */,
-				F438E1FA1C5CF6B4004E37D3 /* LaunchSearchViewController.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -801,7 +796,6 @@
 				F4EE56FF1C5A505F00700DB4 /* CartViewController.m in Sources */,
 				956B0C4B1C59A677003E6859 /* XXYSelectorView.m in Sources */,
 				F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */,
-				F438E1FB1C5CF6B4004E37D3 /* LaunchSearchViewController.m in Sources */,
 				F4E341DE1C4E69EE0094CAF6 /* main.m in Sources */,
 				9542927C1C60F8DA00CAB837 /* ShareViewController.m in Sources */,
 				F438E20A1C5D0DEB004E37D3 /* AnimatedGIFImageSerialization.m in Sources */,

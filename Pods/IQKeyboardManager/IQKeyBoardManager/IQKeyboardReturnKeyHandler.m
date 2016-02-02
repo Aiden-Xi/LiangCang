@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 
 #import "IQKeyboardReturnKeyHandler.h"
-#import "IQKeyboardManager.h"
+
 #import "IQUIView+Hierarchy.h"
 #import "IQNSArray+Sort.h"
 
@@ -30,7 +30,12 @@
 
 #import <UIKit/UITextField.h>
 #import <UIKit/UITextView.h>
+#import <UIKit/UITableView.h>
 #import <UIKit/UIViewController.h>
+
+#ifdef NSFoundationVersionNumber_iOS_5_1
+#import <UIKit/UICollectionView.h>
+#endif
 
 NSString *const kIQTextField                =   @"kIQTextField";
 NSString *const kIQTextFieldDelegate        =   @"kIQTextFieldDelegate";
@@ -49,13 +54,8 @@ NSString *const kIQTextFieldReturnKeyType   =   @"kIQTextFieldReturnKeyType";
 }
 
 @synthesize lastTextFieldReturnKeyType = _lastTextFieldReturnKeyType;
+@synthesize toolbarManageBehaviour = _toolbarManageBehaviour;
 @synthesize delegate = _delegate;
-
-- (instancetype)init
-{
-    self = [self initWithViewController:nil];
-    return self;
-}
 
 -(instancetype)initWithViewController:(UIViewController*)controller
 {
@@ -119,25 +119,34 @@ NSString *const kIQTextFieldReturnKeyType   =   @"kIQTextFieldReturnKeyType";
     [textFieldInfoCache addObject:dictInfo];
 }
 
+#pragma mark - Overriding lastTextFieldReturnKeyType
+-(void)setLastTextFieldReturnKeyType:(UIReturnKeyType)lastTextFieldReturnKeyType
+{
+    _lastTextFieldReturnKeyType = lastTextFieldReturnKeyType;
+    
+    for (NSDictionary *infoDict in textFieldInfoCache)
+    {
+        UITextField *textField = [infoDict objectForKey:kIQTextField];
+
+        [self updateReturnKeyTypeOnTextField:textField];
+    }
+}
+
 -(void)updateReturnKeyTypeOnTextField:(UIView*)textField
 {
-    UIView *superConsideredView;
+    UIView *tableView = [textField superviewOfClassType:[UITableView class]];
     
-    //If find any consider responderView in it's upper hierarchy then will get deepResponderView. (Bug ID: #347)
-    for (Class consideredClass in [[IQKeyboardManager sharedManager] consideredToolbarPreviousNextViewClasses])
-    {
-        superConsideredView = [textField superviewOfClassType:consideredClass];
-        
-        if (superConsideredView != nil)
-            break;
-    }
+#ifdef NSFoundationVersionNumber_iOS_5_1
+    if (tableView == nil)   tableView = [textField superviewOfClassType:[UICollectionView class]];
+#endif
+
 
     NSArray *textFields = nil;
 
     //If there is a tableView in view's hierarchy, then fetching all it's subview that responds. No sorting for tableView, it's by subView position.
-    if (superConsideredView)  //     //   (Enhancement ID: #22)
+    if (tableView)  //     //   (Enhancement ID: #22)
     {
-        textFields = [superConsideredView deepResponderViews];
+        textFields = [tableView deepResponderViews];
     }
     //Otherwise fetching all the siblings
     else
@@ -145,7 +154,7 @@ NSString *const kIQTextFieldReturnKeyType   =   @"kIQTextFieldReturnKeyType";
         textFields = [textField responderSiblings];
         
         //Sorting textFields according to behaviour
-        switch ([[IQKeyboardManager sharedManager] toolbarManageBehaviour])
+        switch (_toolbarManageBehaviour)
         {
                 //If needs to sort it by tag
             case IQAutoToolbarByTag:
@@ -170,23 +179,17 @@ NSString *const kIQTextFieldReturnKeyType   =   @"kIQTextFieldReturnKeyType";
 
 -(void)goToNextResponderOrResign:(UIView*)textField
 {
-    UIView *superConsideredView;
-    
-    //If find any consider responderView in it's upper hierarchy then will get deepResponderView. (Bug ID: #347)
-    for (Class consideredClass in [[IQKeyboardManager sharedManager] consideredToolbarPreviousNextViewClasses])
-    {
-        superConsideredView = [textField superviewOfClassType:consideredClass];
-        
-        if (superConsideredView != nil)
-            break;
-    }
+    UIView *tableView = [textField superviewOfClassType:[UITableView class]];
+#ifdef NSFoundationVersionNumber_iOS_5_1
+    if (tableView == nil)   tableView = [textField superviewOfClassType:[UICollectionView class]];
+#endif
     
     NSArray *textFields = nil;
     
     //If there is a tableView in view's hierarchy, then fetching all it's subview that responds. No sorting for tableView, it's by subView position.
-    if (superConsideredView)  //     //   (Enhancement ID: #22)
+    if (tableView)  //     //   (Enhancement ID: #22)
     {
-        textFields = [superConsideredView deepResponderViews];
+        textFields = [tableView deepResponderViews];
     }
     //Otherwise fetching all the siblings
     else
@@ -194,7 +197,7 @@ NSString *const kIQTextFieldReturnKeyType   =   @"kIQTextFieldReturnKeyType";
         textFields = [textField responderSiblings];
         
         //Sorting textFields according to behaviour
-        switch ([[IQKeyboardManager sharedManager] toolbarManageBehaviour])
+        switch (_toolbarManageBehaviour)
         {
                 //If needs to sort it by tag
             case IQAutoToolbarByTag:
@@ -211,11 +214,14 @@ NSString *const kIQTextFieldReturnKeyType   =   @"kIQTextFieldReturnKeyType";
         }
     }
         
-    //Getting index of current textField.
-    NSUInteger index = [textFields indexOfObject:textField];
-    
-    //If it is not last textField. then it's next object becomeFirstResponder.
-    (index != NSNotFound && index < textFields.count-1) ?   [[textFields objectAtIndex:index+1] becomeFirstResponder]  :   [textField resignFirstResponder];
+    if ([textFields containsObject:textField])
+    {
+        //Getting index of current textField.
+        NSUInteger index = [textFields indexOfObject:textField];
+        
+        //If it is not last textField. then it's next object becomeFirstResponder.
+        (index < textFields.count-1) ?   [[textFields objectAtIndex:index+1] becomeFirstResponder]  :   [textField resignFirstResponder];
+    }
 }
 
 #pragma mark - TextField delegate
@@ -339,6 +345,8 @@ NSString *const kIQTextFieldReturnKeyType   =   @"kIQTextFieldReturnKeyType";
         [self.delegate textViewDidChangeSelection:textView];
 }
 
+#ifdef NSFoundationVersionNumber_iOS_6_1
+
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange
 {
     if ([self.delegate respondsToSelector:@selector(textView:shouldInteractWithURL:inRange:)])
@@ -354,6 +362,8 @@ NSString *const kIQTextFieldReturnKeyType   =   @"kIQTextFieldReturnKeyType";
     else
         return YES;
 }
+
+#endif
 
 -(void)dealloc
 {

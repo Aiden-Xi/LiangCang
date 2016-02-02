@@ -26,6 +26,10 @@
 #import "IQKeyboardManagerConstantsInternal.h"
 #import <UIKit/UILabel.h>
 
+#ifndef NSFoundationVersionNumber_iOS_5_1
+    #define NSTextAlignmentCenter UITextAlignmentCenter
+#endif
+
 @implementation IQTitleBarButtonItem
 {
     UIView *_titleView;
@@ -33,10 +37,9 @@
 }
 @synthesize font = _font;
 
-
 -(instancetype)initWithFrame:(CGRect)frame title:(NSString *)title
 {
-    self = [super init];
+    self = [super initWithTitle:nil style:UIBarButtonItemStylePlain target:nil action:nil];
     if (self)
     {
         _titleView = [[UIView alloc] initWithFrame:frame];
@@ -44,8 +47,15 @@
         _titleView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
         _titleLabel = [[UILabel alloc] initWithFrame:_titleView.bounds];
-
-        [_titleLabel setTextColor:[UIColor lightGrayColor]];
+        
+        if (IQ_IS_IOS7_OR_GREATER)
+        {
+            [_titleLabel setTextColor:[UIColor lightGrayColor]];
+        }
+        else
+        {
+            [_titleLabel setTextColor:[UIColor whiteColor]];
+        }
         
         [_titleLabel setBackgroundColor:[UIColor clearColor]];
         [_titleLabel setTextAlignment:NSTextAlignmentCenter];

@@ -1,7 +1,8 @@
-platform :ios, '7.0'
-pod "AFNetworking", "~> 2.0"
-pod "MJExtension"
+platform :ios,'8.0'
+pod "AFNetworking"
 pod "Masonry"
-pod "MMDrawerController"
 pod "IQKeyboardManager"
+pod "MMDrawerController"
+pod "MJExtension"
 pod "MJRefresh"
+
