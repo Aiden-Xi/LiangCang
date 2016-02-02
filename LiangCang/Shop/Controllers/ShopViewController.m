@@ -50,7 +50,7 @@
     
     _searchBar.placeholder = @"搜索";
     //    _searchBar.prompt = @"哈哈哈";   // 搜索框顶部文字
-    _searchBar.backgroundImage = [UIImage createImageWithColor:[UIColor blackColor]];
+    _searchBar.backgroundImage = [UIImage createImageWithColor:kDefaultColor];
     _searchBar.delegate = self;
     _searchBar.tintColor = [UIColor whiteColor];
     _searchBar.searchBarStyle = UISearchBarStyleDefault;
@@ -71,7 +71,7 @@
 }
 
 - (void)createSelectButtonView {
-    _selectView = [[XXYSelectorView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 30) titleArray:@[@"分类", @"品牌", @"首页", @"专题", @"礼物"] defaultSelect:2 backGroudColor:kDefaultBackColor lineColor:kDefaultWhiteColor];
+    _selectView = [[XXYSelectorView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 30) titleArray:@[@"分类", @"品牌", @"首页", @"专题", @"礼物"] defaultSelect:2 backGroudColor:kDefaultColor lineColor:kDefaultWhiteColor];
     _selectView.delegate = self;
     
     [self.view addSubview:_selectView];

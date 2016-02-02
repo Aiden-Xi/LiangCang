@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     // 设置tabbar背景颜色为黑色
-    self.tabBar.barTintColor=kDefaultColor;
+    self.tabBar.barTintColor=kDefaultBlackColor;
     
     // 去除tabbar的模糊效果
     self.tabBar.translucent = NO;

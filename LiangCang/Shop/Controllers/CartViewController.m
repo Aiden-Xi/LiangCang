@@ -9,6 +9,7 @@
 #import "CartViewController.h"
 
 @interface CartViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
 
 @end
 
@@ -19,7 +20,9 @@
 }
 
 - (void)viewDidLoad {
-    self.view.backgroundColor = kDefaultBackColor;
+    self.view.backgroundColor = kDefaultColor;
+    // 扩大返回按钮的点击范围
+    [self.backButton setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
 }
 - (IBAction)cartToShop:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];

@@ -35,6 +35,7 @@
 #import "NSDictionary+safeObjectForKey.h"
 #import "KKNavigationController.h"
 #import "NSString+Tools.h"
+#import "UIButton+TJButtom.h"
 
 #pragma mark - 系统基础设置 -
 
@@ -58,8 +59,8 @@
 #define kScreenSize                         CGSizeMake(kScreenWidth, kScreenHeight)
 #define kLineHeight                         (1 / [UIScreen mainScreen].scale)
 #define kDefaultColor                       COLOR(17, 17, 17, 1)
-#define kDefaultBackColor                   COLOR(25, 25, 25, 1)
 #define kDefaultWhiteColor                  COLOR(255, 255, 255, 1)
+#define kDefaultBlackColor                  COLOR(0, 0, 0, 1)
 
 #define COLOR(r, g, b, a)                   [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:(a * 1.0)]
 
@@ -70,8 +71,7 @@
 #define kFontBold                           @"HelveticaNeue-Bold"
 
 #define kFontSizeFamily(sizeFont)           [UIFont fontWithName:kFontFamily size:sizeFont]
-#define kFontSizeBold(sizeFont)             [UIFont fontWithName:kFontBold size:sizeFont]
-
+#define kFontSizeFamilyBold(sizeFont)             [UIFont fontWithName:kFontBold size:sizeFont]
 
 #pragma mark - 系统原生单例和StoryBoard -
 

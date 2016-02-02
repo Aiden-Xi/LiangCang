@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +31,7 @@
         <!--商店-->
         <scene sceneID="8Nq-Z4-yzY">
             <objects>
-                <navigationController title="商店" navigationBarHidden="YES" id="4FS-ZG-EeT" sceneMemberID="viewController">
+                <navigationController title="商店" navigationBarHidden="YES" id="4FS-ZG-EeT" customClass="KKNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="item" id="gsy-v0-rWk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DKc-ad-2IV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -60,7 +61,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3v-po-Ejk">
-                                        <rect key="frame" x="10" y="28" width="25" height="25"/>
+                                        <rect key="frame" x="10" y="30" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="4cq-Wp-vVC"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="MUt-qW-bYN"/>
@@ -115,7 +116,7 @@
                                     <constraint firstAttribute="trailing" secondItem="axM-VM-EBV" secondAttribute="trailing" constant="10" id="CQ0-dP-ZeB"/>
                                     <constraint firstItem="LMQ-bH-cgX" firstAttribute="top" secondItem="dIO-V5-Lns" secondAttribute="top" constant="28" id="IyO-Gf-K6w"/>
                                     <constraint firstItem="N5d-L5-0RK" firstAttribute="centerX" secondItem="dIO-V5-Lns" secondAttribute="centerX" id="JSy-yJ-PmC"/>
-                                    <constraint firstItem="S3v-po-Ejk" firstAttribute="top" secondItem="dIO-V5-Lns" secondAttribute="top" constant="28" id="cwN-el-gtm"/>
+                                    <constraint firstItem="S3v-po-Ejk" firstAttribute="top" secondItem="dIO-V5-Lns" secondAttribute="top" constant="30" id="cwN-el-gtm"/>
                                     <constraint firstItem="S3v-po-Ejk" firstAttribute="leading" secondItem="dIO-V5-Lns" secondAttribute="leading" constant="10" id="gil-AC-cYx"/>
                                     <constraint firstItem="axM-VM-EBV" firstAttribute="centerY" secondItem="N5d-L5-0RK" secondAttribute="centerY" id="jmi-OM-2eq"/>
                                     <constraint firstAttribute="height" constant="64" id="njQ-cW-Qj7"/>
@@ -142,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y8-wj-HZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2984" y="-1364"/>
+            <point key="canvasLocation" x="-2915" y="-1364"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="Om1-UV-fln">
@@ -199,6 +200,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fim-c3-HoI"/>
+                    <connections>
+                        <outlet property="backButton" destination="Sm7-b0-Bu9" id="PZx-Wb-X5e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddr-24-z9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="-2927" y="-650"/>
         </scene>
-        <!--View Controller-->
+        <!--Share View Controller-->
         <scene sceneID="2m2-TR-Cce">
             <objects>
-                <viewController id="fdw-ul-WyG" sceneMemberID="viewController">
+                <viewController id="fdw-ul-WyG" customClass="ShareViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="khY-br-JeS"/>
                         <viewControllerLayoutGuide type="bottom" id="b1j-bu-Qb1"/>
@@ -361,15 +365,18 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Nhj-aM-Jfe"/>
+                    <connections>
+                        <outlet property="backButton" destination="syH-aq-Cgm" id="Zkj-VQ-Iid"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vM-ea-wsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2923" y="43"/>
         </scene>
-        <!--View Controller-->
+        <!--Talent View Controller-->
         <scene sceneID="8tR-cN-Zz6">
             <objects>
-                <viewController id="T9v-iM-u9g" sceneMemberID="viewController">
+                <viewController id="T9v-iM-u9g" customClass="TalentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dvw-S3-tCf"/>
                         <viewControllerLayoutGuide type="bottom" id="hM9-1E-3GH"/>
@@ -418,15 +425,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ye2-I6-o0P"/>
+                    <connections>
+                        <outlet property="backButton" destination="Isp-C4-jQS" id="EbP-DT-teg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3G-PI-xTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2915" y="739"/>
         </scene>
-        <!--View Controller-->
+        <!--Personal View Controller-->
         <scene sceneID="yX0-Le-Re2">
             <objects>
-                <viewController id="uj4-5l-Mf8" sceneMemberID="viewController">
+                <viewController id="uj4-5l-Mf8" customClass="PersonalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Oj2-nY-olc"/>
                         <viewControllerLayoutGuide type="bottom" id="BL2-6C-Eq8"/>
@@ -475,6 +485,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aik-Dd-MSS"/>
+                    <connections>
+                        <outlet property="backButton" destination="Vci-gN-Pj8" id="Vbk-rN-TEP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhn-dm-Tp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,7 +496,7 @@
         <!--杂志-->
         <scene sceneID="MNg-lj-Yrr">
             <objects>
-                <navigationController title="杂志" navigationBarHidden="YES" id="6Mn-im-T20" sceneMemberID="viewController">
+                <navigationController title="杂志" navigationBarHidden="YES" id="6Mn-im-T20" customClass="KKNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="av6-MN-ov0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R1K-LS-eu0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -500,7 +513,7 @@
         <!--个人-->
         <scene sceneID="o2p-c0-0wL">
             <objects>
-                <navigationController title="个人" navigationBarHidden="YES" id="qzA-sz-yOJ" sceneMemberID="viewController">
+                <navigationController title="个人" navigationBarHidden="YES" id="qzA-sz-yOJ" customClass="KKNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8GU-Oa-K1X"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUt-Mx-xp8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -517,7 +530,7 @@
         <!--达人-->
         <scene sceneID="Evh-nW-A7x">
             <objects>
-                <navigationController title="达人" navigationBarHidden="YES" id="eL1-By-b9m" sceneMemberID="viewController">
+                <navigationController title="达人" navigationBarHidden="YES" id="eL1-By-b9m" customClass="KKNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3BN-CR-yKy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ivm-wm-NTl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -534,7 +547,7 @@
         <!--分享-->
         <scene sceneID="LBc-DV-Zf6">
             <objects>
-                <navigationController title="分享" navigationBarHidden="YES" id="G7B-NU-uMp" sceneMemberID="viewController">
+                <navigationController title="分享" navigationBarHidden="YES" id="G7B-NU-uMp" customClass="KKNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cNp-ur-YUk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rpY-oq-bRt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
