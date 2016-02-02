@@ -81,10 +81,10 @@
     // 放大
     [UIView animateWithDuration:1.0 animations:^{
         if (_isOpen) {
-            self.arrow.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.2, 1.2);
+            self.arrow.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.4, 1.4);
             _isOpen = NO;
         } else {
-            self.arrow.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.8, 0.8);
+            self.arrow.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.6, 0.6);
             _isOpen = YES;
         }
     }];

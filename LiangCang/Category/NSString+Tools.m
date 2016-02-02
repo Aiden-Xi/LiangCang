@@ -37,7 +37,7 @@
     
     NSString *timeString = [dateFormatter stringFromDate:date];
     
-    
+    XXYLog(@"riqi--%@", timeString);
     return timeString;
 }
 

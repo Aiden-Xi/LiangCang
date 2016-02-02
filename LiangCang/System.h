@@ -57,8 +57,8 @@
 #define kScreenHeight                       ([[UIScreen mainScreen] bounds].size.height)
 #define kScreenSize                         CGSizeMake(kScreenWidth, kScreenHeight)
 #define kLineHeight                         (1 / [UIScreen mainScreen].scale)
-#define kDefaultColor                       COLOR(39, 40, 34, 1)
-#define kDefaultBackColor                   COLOR(52, 54, 45, 1)
+#define kDefaultColor                       COLOR(17, 17, 17, 1)
+#define kDefaultBackColor                   COLOR(25, 25, 25, 1)
 #define kDefaultWhiteColor                  COLOR(255, 255, 255, 1)
 
 #define COLOR(r, g, b, a)                   [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:(a * 1.0)]
@@ -80,8 +80,6 @@
 #define kUserDefaults                       [NSUserDefaults standardUserDefaults]
 #define kNotificationCenter                 [NSNotificationCenter defaultCenter]
 
-#define kStoryBoard(name)               (UIStoryboard *)[UIStoryboard storyboardWithName:name bundle:nil]
-#define kLoginRegisterStoryBoard            (UIStoryboard *)[UIStoryboard storyboardWithName:@"LoginRegister" bundle:nil]
-
+#define kStoryBoard(name)                   (UIStoryboard *)[UIStoryboard storyboardWithName:name bundle:nil]
 
 #endif /* System_h */

@@ -34,7 +34,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        self.screenShotsList = [[NSMutableArray alloc]initWithCapacity:2];
+        self.screenShotsList = [[NSMutableArray alloc] initWithCapacity:2];
         self.canDragBack = YES;
         
     }
@@ -122,8 +122,8 @@
     
     blackMask.alpha = alpha;
     
-    CGFloat aa = abs(startBackViewX)/kkBackViewWidth;
-    CGFloat y = x*aa;
+    CGFloat aa = fabs(startBackViewX)/kkBackViewWidth;
+    CGFloat y = x * aa;
     
     UIImage *lastScreenShot = [self.screenShotsList lastObject];
     CGFloat lastScreenShotViewHeight = lastScreenShot.size.height;
@@ -184,7 +184,7 @@
         
         UIImage *lastScreenShot = [self.screenShotsList lastObject];
         
-        lastScreenShotView = [[UIImageView alloc]initWithImage:lastScreenShot];
+        lastScreenShotView = [[UIImageView alloc] initWithImage:lastScreenShot];
         
         startBackViewX = startX;
         [lastScreenShotView setFrame:CGRectMake(startBackViewX,
@@ -222,16 +222,16 @@
     CGFloat moveTargetX = 0;
     CGFloat duration;
     BOOL finishPop = NO;
-    if (gestureTargetX > navigationWidth * 0.6) {
+    if (gestureTargetX > navigationWidth * 0.3) {
         // 需要pop, pop的总时间是0.3, 完成了percent,还剩余1-percent
-        duration = 0.3 * (1.0 - completionPercent);
+        duration = 0.15 * (0.5 - completionPercent);
         moveTargetX = navigationWidth;
         finishPop = YES;
     } else {
-        //        再push回去,如果已经pop了百分之percent,则时间就是completionPercent *0.3
-        duration = completionPercent * 0.3;
+        // 再push回去,如果已经pop了百分之percent,则时间就是completionPercent *0.3
+        duration = completionPercent * 0.15;
     }
-    duration = MAX(MIN(duration, 0.3), 0.01);
+    duration = MAX(MIN(duration, 0.15), 0.01);
     void (^completion)(BOOL) = ^(BOOL finished) {
         _isMoving = NO;
         if (finishPop) {
@@ -243,6 +243,9 @@
             self.backgroundView.hidden = YES;
         }
     };
+    
+    XXYLog(@"---00---%f", duration);
+    
     [UIView animateWithDuration:duration animations:^{
         [self moveViewWithX:finishPop ? navigationWidth : 0];
     } completion:completion];

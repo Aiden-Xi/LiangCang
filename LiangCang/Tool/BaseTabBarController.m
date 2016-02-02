@@ -30,13 +30,13 @@
         UIImage * tabImage = [[UIImage imageNamed:imageName[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIImage * tabSelectImage = [[UIImage imageNamed:selectImageName[i]]  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
-        viewController.tabBarItem.image = tabImage;
-        viewController.tabBarItem.selectedImage = tabSelectImage;
+        [viewController.tabBarItem setImage:tabImage];
+        [viewController.tabBarItem setSelectedImage:tabSelectImage];
         viewController.tabBarItem.title = titleName[i];
         
         // 设置状态栏的整体偏移量 水平方向和垂直方向
         // [viewController.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, 0)];
-        
+    
         [viewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor lightGrayColor], NSForegroundColorAttributeName, kFontSizeFamily(12), NSFontAttributeName, nil] forState:UIControlStateNormal];
         
         [viewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kDefaultWhiteColor, NSForegroundColorAttributeName, kFontSizeFamily(12), NSFontAttributeName,nil] forState:UIControlStateSelected];

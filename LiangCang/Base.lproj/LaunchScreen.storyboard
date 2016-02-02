@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="gGn-og-gFz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="gGn-og-gFz">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LiangCangGIF.gif" translatesAutoresizingMaskIntoConstraints="NO" id="DiG-qq-rtu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="iyN-yP-JOe">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DiG-qq-rtu" firstAttribute="width" secondItem="NAB-9i-C2v" secondAttribute="width" id="4GR-T2-yeC"/>
-                            <constraint firstItem="DiG-qq-rtu" firstAttribute="centerX" secondItem="NAB-9i-C2v" secondAttribute="centerX" id="Rxv-jg-DgZ"/>
-                            <constraint firstItem="DiG-qq-rtu" firstAttribute="height" secondItem="NAB-9i-C2v" secondAttribute="height" id="bcu-hC-bSm"/>
-                            <constraint firstItem="DiG-qq-rtu" firstAttribute="centerY" secondItem="NAB-9i-C2v" secondAttribute="centerY" id="xtl-EZ-Z1U"/>
+                            <constraint firstItem="iyN-yP-JOe" firstAttribute="top" secondItem="LKh-ia-KrR" secondAttribute="bottom" constant="-20" id="A1b-gP-T9B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iyN-yP-JOe" secondAttribute="trailing" constant="-20" id="F8k-qA-btK"/>
+                            <constraint firstItem="iyN-yP-JOe" firstAttribute="leading" secondItem="NAB-9i-C2v" secondAttribute="leadingMargin" constant="-20" id="aMf-pz-wis"/>
+                            <constraint firstItem="RMR-RM-ozH" firstAttribute="top" secondItem="iyN-yP-JOe" secondAttribute="bottom" id="d9u-3z-itd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LiangCangGIF.gif" width="192" height="281"/>
+        <image name="LaunchScreen.png" width="1242" height="2208"/>
     </resources>
 </document>

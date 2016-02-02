@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LaunchScreenViewController.h"
 
 @interface AppDelegate ()
 
