@@ -20,6 +20,8 @@
     /// 注册各种库的使用
     [self startRegisterDefault];
     
+    sleep(1.5);
+    
     return YES;
 }
 

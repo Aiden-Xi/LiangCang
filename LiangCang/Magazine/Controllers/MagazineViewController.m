@@ -57,7 +57,7 @@
     // 隐藏tabbar, 主视图高度增高tabbar的高度
     if (self.needToHideBottomBar) {
         self.needToHideBottomBar = NO;
-        [UIView animateWithDuration:0.1 animations:^{
+        [UIView animateWithDuration:0.5 animations:^{
             CGRect frame = self.tabBarController.tabBar.frame;
             [self.tabBarController.tabBar setFrame:CGRectMake(frame.origin.x, frame.origin.y + frame.size.height, frame.size.width, frame.size.height)];
             
@@ -67,7 +67,7 @@
     }
     else {
         self.needToHideBottomBar = YES;
-        [UIView animateWithDuration:0.1 animations:^{
+        [UIView animateWithDuration:0.5 animations:^{
             CGRect frame = self.tabBarController.tabBar.frame;
             [self.tabBarController.tabBar setFrame:CGRectMake(frame.origin.x, frame.origin.y - frame.size.height, frame.size.width, frame.size.height)];
             

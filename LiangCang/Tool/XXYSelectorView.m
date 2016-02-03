@@ -22,7 +22,7 @@
         CGFloat buttonHeight = frame.size.height - 5;
         for (NSInteger i = 0; i < self.titleArray.count; i++) {
             CGFloat buttonX = 0 + buttonWidth * i;
-            CGFloat buttonY = 5;
+            CGFloat buttonY = 2;
             
             // 添加按钮
             YunButton *selectButton = [[YunButton alloc] initWithFrame:CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight)];

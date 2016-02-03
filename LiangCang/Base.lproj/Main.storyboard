@@ -513,7 +513,7 @@
         <!--个人-->
         <scene sceneID="o2p-c0-0wL">
             <objects>
-                <navigationController title="个人" navigationBarHidden="YES" id="qzA-sz-yOJ" customClass="KKNavigationController" sceneMemberID="viewController">
+                <navigationController title="个人" navigationBarHidden="YES" id="qzA-sz-yOJ" customClass="SlideNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8GU-Oa-K1X"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUt-Mx-xp8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -530,7 +530,7 @@
         <!--达人-->
         <scene sceneID="Evh-nW-A7x">
             <objects>
-                <navigationController title="达人" navigationBarHidden="YES" id="eL1-By-b9m" customClass="KKNavigationController" sceneMemberID="viewController">
+                <navigationController title="达人" navigationBarHidden="YES" id="eL1-By-b9m" customClass="SlideNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3BN-CR-yKy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ivm-wm-NTl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -547,7 +547,7 @@
         <!--分享-->
         <scene sceneID="LBc-DV-Zf6">
             <objects>
-                <navigationController title="分享" navigationBarHidden="YES" id="G7B-NU-uMp" customClass="KKNavigationController" sceneMemberID="viewController">
+                <navigationController title="分享" navigationBarHidden="YES" id="G7B-NU-uMp" customClass="SlideNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cNp-ur-YUk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rpY-oq-bRt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -567,6 +567,6 @@
         <image name="back_arrow.png" width="25" height="25"/>
         <image name="cart.png" width="25" height="25"/>
         <image name="left_category.png" width="25" height="25"/>
-        <image name="search.png" width="32" height="32"/>
+        <image name="search.png" width="25" height="25"/>
     </resources>
 </document>
