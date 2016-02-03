@@ -9,7 +9,8 @@
 #import "TalentViewController.h"
 
 @interface TalentViewController ()
-@property (strong, nonatomic) IBOutlet UIButton *backButton;
+@property (strong, nonatomic) IBOutlet UIButton *leftSlideMenu;
+- (IBAction)LeftSlideMenuAction:(UIButton *)sender;
 
 @end
 
@@ -19,7 +20,7 @@
     [super viewDidLoad];
     
     // 扩大返回按钮的点击范围
-    [self.backButton setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
+    [self.leftSlideMenu setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,4 +38,6 @@
 }
 */
 
+- (IBAction)LeftSlideMenuAction:(UIButton *)sender {
+}
 @end

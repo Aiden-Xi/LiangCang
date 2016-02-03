@@ -21,7 +21,7 @@
     [self startRegisterDefault];
     
     sleep(1.5);
-    
+
     return YES;
 }
 

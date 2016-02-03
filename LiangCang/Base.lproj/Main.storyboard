@@ -7,6 +7,49 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Left Menu View Controller-->
+        <scene sceneID="eG7-hw-stI">
+            <objects>
+                <viewController storyboardIdentifier="LeftMenuViewController" id="dwd-bJ-hFI" customClass="LeftMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hSJ-jx-JUD"/>
+                        <viewControllerLayoutGuide type="bottom" id="p3E-Ul-bO7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wX9-1A-zXi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wma-bu-ZKb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6X0-2J-awr">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6X0-2J-awr" id="N4y-0e-SFE">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p3E-Ul-bO7" firstAttribute="top" secondItem="wma-bu-ZKb" secondAttribute="bottom" id="Cnh-ny-Ks4"/>
+                            <constraint firstItem="wma-bu-ZKb" firstAttribute="leading" secondItem="wX9-1A-zXi" secondAttribute="leadingMargin" constant="-20" id="Yrg-EE-o6O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wma-bu-ZKb" secondAttribute="trailing" constant="-20" id="kR5-Re-6gZ"/>
+                            <constraint firstItem="wma-bu-ZKb" firstAttribute="top" secondItem="hSJ-jx-JUD" secondAttribute="bottom" constant="-20" id="wJB-og-d17"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wma-bu-ZKb" id="1AJ-dK-meQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOX-oE-EiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5826" y="-1422"/>
+        </scene>
         <!--Base Tab Bar Controller-->
         <scene sceneID="l3G-xB-XJw">
             <objects>
@@ -148,7 +191,7 @@
         <!--Cart View Controller-->
         <scene sceneID="Om1-UV-fln">
             <objects>
-                <viewController id="KUC-PA-Dw5" customClass="CartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartViewController" id="KUC-PA-Dw5" customClass="CartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6nq-49-tyJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Ag4-D1-nQE"/>
@@ -327,6 +370,9 @@
                                             <constraint firstAttribute="width" constant="25" id="VEI-hB-VEx"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="left_category.png"/>
+                                        <connections>
+                                            <action selector="LeftSlideMenuAction:" destination="fdw-ul-WyG" eventType="touchUpInside" id="kpQ-sH-XUb"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDl-qp-rjQ">
                                         <rect key="frame" x="195" y="30" width="210" height="22"/>
@@ -366,12 +412,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nhj-aM-Jfe"/>
                     <connections>
-                        <outlet property="backButton" destination="syH-aq-Cgm" id="Zkj-VQ-Iid"/>
+                        <outlet property="leftSlideMenu" destination="syH-aq-Cgm" id="vGf-b1-uAd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vM-ea-wsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2923" y="43"/>
+            <point key="canvasLocation" x="-2660" y="33"/>
         </scene>
         <!--Talent View Controller-->
         <scene sceneID="8tR-cN-Zz6">
@@ -395,6 +441,9 @@
                                             <constraint firstAttribute="height" constant="25" id="koY-Q9-Qsd"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="left_category.png"/>
+                                        <connections>
+                                            <action selector="LeftSlideMenuAction:" destination="T9v-iM-u9g" eventType="touchUpInside" id="BYl-rn-Ehw"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="达人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb8-6c-abO">
                                         <rect key="frame" x="195" y="32" width="210" height="22"/>
@@ -426,7 +475,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ye2-I6-o0P"/>
                     <connections>
-                        <outlet property="backButton" destination="Isp-C4-jQS" id="EbP-DT-teg"/>
+                        <outlet property="leftSlideMenu" destination="Isp-C4-jQS" id="P4y-pD-hcZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3G-PI-xTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -455,6 +504,9 @@
                                             <constraint firstAttribute="width" constant="25" id="c3p-gD-a5F"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="left_category.png"/>
+                                        <connections>
+                                            <action selector="leftSlideMenuAction:" destination="uj4-5l-Mf8" eventType="touchUpInside" id="gUx-BG-0zM"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4q-SR-Fhp">
                                         <rect key="frame" x="195" y="32" width="210" height="22"/>
@@ -486,7 +538,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aik-Dd-MSS"/>
                     <connections>
-                        <outlet property="backButton" destination="Vci-gN-Pj8" id="Vbk-rN-TEP"/>
+                        <outlet property="leftSlideMenu" destination="Vci-gN-Pj8" id="FcP-86-Wwq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhn-dm-Tp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -513,7 +565,7 @@
         <!--个人-->
         <scene sceneID="o2p-c0-0wL">
             <objects>
-                <navigationController title="个人" navigationBarHidden="YES" id="qzA-sz-yOJ" customClass="SlideNavigationController" sceneMemberID="viewController">
+                <navigationController title="个人" navigationBarHidden="YES" id="qzA-sz-yOJ" customClass="KKNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8GU-Oa-K1X"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUt-Mx-xp8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -530,7 +582,7 @@
         <!--达人-->
         <scene sceneID="Evh-nW-A7x">
             <objects>
-                <navigationController title="达人" navigationBarHidden="YES" id="eL1-By-b9m" customClass="SlideNavigationController" sceneMemberID="viewController">
+                <navigationController title="达人" navigationBarHidden="YES" id="eL1-By-b9m" customClass="KKNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3BN-CR-yKy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ivm-wm-NTl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -547,7 +599,7 @@
         <!--分享-->
         <scene sceneID="LBc-DV-Zf6">
             <objects>
-                <navigationController title="分享" navigationBarHidden="YES" id="G7B-NU-uMp" customClass="SlideNavigationController" sceneMemberID="viewController">
+                <navigationController title="分享" navigationBarHidden="YES" id="G7B-NU-uMp" customClass="KKNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cNp-ur-YUk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rpY-oq-bRt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

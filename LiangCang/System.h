@@ -30,7 +30,11 @@
 #import "IQKeyboardManager.h"
 #import "MJRefresh.h"
 
-#pragma mark - Category - 
+#pragma mark - ViewControllers -
+
+#import "AppDelegate.h"
+
+#pragma mark - Category -
 
 #import "YunButton.h"
 #import "NSDictionary+safeObjectForKey.h"
