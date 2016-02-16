@@ -251,6 +251,26 @@
     } completion:completion];
 }
 
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone);
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation
+{
+    return UIStatusBarAnimationNone;
+}
+
 @end
 
 

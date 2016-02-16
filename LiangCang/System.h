@@ -29,6 +29,9 @@
 #import <MMDrawerController/MMDrawerController.h>
 #import "IQKeyboardManager.h"
 #import "MJRefresh.h"
+#import "BaseViewController.h"
+#import "SLideZoomMenuController.h"
+#import "SettingViewController.h"
 
 #pragma mark - ViewControllers -
 
@@ -41,6 +44,7 @@
 #import "KKNavigationController.h"
 #import "NSString+Tools.h"
 #import "UIButton+TJButtom.h"
+#import "UIImage+Extesion.h"
 
 #pragma mark - 系统基础设置 -
 
