@@ -30,8 +30,6 @@
 #import "IQKeyboardManager.h"
 #import "MJRefresh.h"
 #import "BaseViewController.h"
-#import "SLideZoomMenuController.h"
-#import "SettingViewController.h"
 
 #pragma mark - ViewControllers -
 

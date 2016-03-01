@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		951418241C72E7C500B8F07F /* SLideZoomMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951418221C72E7C500B8F07F /* SLideZoomMenuController.m */; };
-		951418251C72E7C500B8F07F /* SLideZoomMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951418231C72E7C500B8F07F /* SLideZoomMenuController.xib */; };
-		951418291C72E81900B8F07F /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951418281C72E81900B8F07F /* SettingViewController.m */; };
 		9514182B1C72ED9A00B8F07F /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9514182A1C72ED9A00B8F07F /* bg.png */; };
 		952170301C5B008600FA73C8 /* MagazineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9521702F1C5B008600FA73C8 /* MagazineViewController.m */; };
 		952170331C5B4FA700FA73C8 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 952170311C5B4FA700FA73C8 /* cart.png */; };
@@ -97,11 +94,6 @@
 		3DFF22DEFE71AA0A6EA1D94F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		49569D8DE4D0BED16A2EBDF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		831C2FF701C66DAD790B6ECA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		951418211C72E7C500B8F07F /* SLideZoomMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLideZoomMenuController.h; sourceTree = "<group>"; };
-		951418221C72E7C500B8F07F /* SLideZoomMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLideZoomMenuController.m; sourceTree = "<group>"; };
-		951418231C72E7C500B8F07F /* SLideZoomMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLideZoomMenuController.xib; sourceTree = "<group>"; };
-		951418271C72E81900B8F07F /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		951418281C72E81900B8F07F /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		9514182A1C72ED9A00B8F07F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		9521702E1C5B008600FA73C8 /* MagazineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagazineViewController.h; sourceTree = "<group>"; };
 		9521702F1C5B008600FA73C8 /* MagazineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagazineViewController.m; sourceTree = "<group>"; };
@@ -243,25 +235,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		951418201C72E7C500B8F07F /* SlideZoomMenu */ = {
-			isa = PBXGroup;
-			children = (
-				951418211C72E7C500B8F07F /* SLideZoomMenuController.h */,
-				951418221C72E7C500B8F07F /* SLideZoomMenuController.m */,
-				951418231C72E7C500B8F07F /* SLideZoomMenuController.xib */,
-			);
-			path = SlideZoomMenu;
-			sourceTree = "<group>";
-		};
-		951418261C72E81900B8F07F /* LeftViewController */ = {
-			isa = PBXGroup;
-			children = (
-				951418271C72E81900B8F07F /* SettingViewController.h */,
-				951418281C72E81900B8F07F /* SettingViewController.m */,
-			);
-			path = LeftViewController;
-			sourceTree = "<group>";
-		};
 		952049271C4F27EC001C4BB3 /* Magazine */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,8 +323,6 @@
 		9593A1581C61D9ED0003D3AC /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				951418261C72E81900B8F07F /* LeftViewController */,
-				951418201C72E7C500B8F07F /* SlideZoomMenu */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -727,7 +698,6 @@
 				F46799271C5CEB4D009A9320 /* back_arrow@2x.png in Resources */,
 				F4CE41F91C5A5D070078FBDA /* share_tab@2x.png in Resources */,
 				F4CE41EE1C5A5D070078FBDA /* magazine_tab_select.png in Resources */,
-				951418251C72E7C500B8F07F /* SLideZoomMenuController.xib in Resources */,
 				F4CE41F41C5A5D070078FBDA /* personal_tab.png in Resources */,
 				952170341C5B4FA700FA73C8 /* cart@2x.png in Resources */,
 				F4CE41FB1C5A5D070078FBDA /* shop_tab_select@2x.png in Resources */,
@@ -834,12 +804,10 @@
 				F4EE56FF1C5A505F00700DB4 /* CartViewController.m in Sources */,
 				956B0C4B1C59A677003E6859 /* XXYSelectorView.m in Sources */,
 				F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */,
-				951418291C72E81900B8F07F /* SettingViewController.m in Sources */,
 				F4E341DE1C4E69EE0094CAF6 /* main.m in Sources */,
 				9542927C1C60F8DA00CAB837 /* ShareViewController.m in Sources */,
 				F438E20A1C5D0DEB004E37D3 /* AnimatedGIFImageSerialization.m in Sources */,
 				9542926D1C60770D00CAB837 /* LaunchScreenViewController.m in Sources */,
-				951418241C72E7C500B8F07F /* SLideZoomMenuController.m in Sources */,
 				F4CE41A81C5A51FD0078FBDA /* NSString+Tools.m in Sources */,
 				95B35BAA1C58CD120057C143 /* BaseViewController.m in Sources */,
 				F4CE41AA1C5A51FD0078FBDA /* UIView+AddBadge.m in Sources */,
