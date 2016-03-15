@@ -68,6 +68,10 @@
     manager.shouldResignOnTouchOutside = YES;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = NO;
+    
+    /// BugLy 配置
+    [[CrashReporter sharedInstance] enableLog:YES];
+    [[CrashReporter sharedInstance] installWithAppId:kBugLyAppId];
 }
 
 @end

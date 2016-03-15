@@ -5,4 +5,5 @@ pod "IQKeyboardManager"
 pod "MMDrawerController"
 pod "MJExtension"
 pod "MJRefresh"
-
+pod "ReactiveCocoa"
+pod "Bugly"
