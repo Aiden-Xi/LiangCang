@@ -10,6 +10,7 @@
 #import "LaunchScreenViewController.h"
 #import "BaseTabBarController.h"
 #import "YunGuideViewController.h"
+#define kLastAppVersion @"lastAppVersion"
 
 @interface AppDelegate ()
 
@@ -26,16 +27,28 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; // 添加的
     self.window.backgroundColor = kDefaultBlackColor; // 添加的
     
-//    UIStoryboard *mainStoryboard = kStoryBoard(@"Main");
+//    NSUserDefaults *defaults = kUserDefaults;
 //    
-//    BaseTabBarController *baseTabVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"baseTabbarController"];
+//    NSString *first = [defaults objectForKey:@"isFirst"];
 //    
-//    self.window.rootViewController = baseTabVC;
-    
-    YunGuideViewController *guideVC = [[YunGuideViewController alloc] init];
-    
-    self.window.rootViewController = guideVC;
-    
+//    if (!first) {
+//        [defaults setObject:@"yes" forKey:@"isFirst"];
+//        
+//        [defaults synchronize];
+//        
+        YunGuideViewController *guide = [[YunGuideViewController alloc] init];
+        UINavigationController *popNC = [[UINavigationController alloc] initWithRootViewController:guide];
+        
+        guide.imageNameArray = @[@"1", @"2", @"3", @"4"];
+        
+        self.window.rootViewController = popNC;
+//    } else {
+//        UIStoryboard *mainStoryboard = kStoryBoard(@"Main");
+//        
+//        BaseTabBarController *baseTabVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"baseTabbarController"];
+//        
+//        self.window.rootViewController = baseTabVC;
+//    }
     
     [self.window makeKeyAndVisible];
     

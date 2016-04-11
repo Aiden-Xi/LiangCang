@@ -10,3 +10,4 @@
 #import "UIImage+ImageWithColor.h"
 #import "UIImage+Screenshot.h"
 #import "UIImage+Cut.h"
+#import "UIImage+Compress.h"

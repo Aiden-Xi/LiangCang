@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YunGuideView.h"
 #import "BaseTabBarController.h"
 
+#define kAppDelegate                        (AppDelegate *)[UIApplication sharedApplication].delegate
+#define kUserDefaults                       [NSUserDefaults standardUserDefaults]
+#define kScreenBounds                       ([[UIScreen mainScreen] bounds])
+#define kScreenWidth                        ([[UIScreen mainScreen] bounds].size.width)
+#define kScreenHeight                       ([[UIScreen mainScreen] bounds].size.height)
+
 typedef NS_ENUM(NSInteger, GuideType) {
-    FullScreen      ,     //!<   全屏显示
+    FullScreen,           //!<   全屏显示
     UpAndDown             //!<   上下布局
 };
 
@@ -26,32 +31,18 @@ typedef NS_ENUM(NSInteger, GuideType) {
 @interface YunGuideViewController : UIViewController
 
 /**
- *  项目使用的tabBarController
- */
-@property (nonatomic, strong) BaseTabBarController *tabbarController;
-
-/**
- *  引导页图片空间
- */
-@property (nonatomic, strong) UIImageView *guideImageView;
-
-/**
  *  引导页样式
  */
 @property (nonatomic, assign) GuideType guideType;
 
 /**
- *  获取引导页图片数组名称
- *
- *  @param imageNameArray 图片名称数组
+ *  按钮颜色
  */
-- (void)getGuideImageNameArray:(NSArray *)imageNameArray;
+@property (nonatomic, strong) UIColor *loginSignButtonColor;
 
 /**
- *  图片裁剪
- *
- *  @param rect 裁剪的尺寸
+ *  获取引导页图片数组
  */
--(UIImage*)getSubImage:(CGRect)rect image:(UIImage *)image;
+@property (nonatomic, strong) NSArray *imageNameArray;
 
 @end
