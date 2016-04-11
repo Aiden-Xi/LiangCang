@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LaunchScreenViewController.h"
 #import "BaseTabBarController.h"
+#import "YunGuideViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,11 +26,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; // 添加的
     self.window.backgroundColor = kDefaultBlackColor; // 添加的
     
-    UIStoryboard *mainStoryboard = kStoryBoard(@"Main");
+//    UIStoryboard *mainStoryboard = kStoryBoard(@"Main");
+//    
+//    BaseTabBarController *baseTabVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"baseTabbarController"];
+//    
+//    self.window.rootViewController = baseTabVC;
     
-    BaseTabBarController *baseTabVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"baseTabbarController"];
+    YunGuideViewController *guideVC = [[YunGuideViewController alloc] init];
     
-    self.window.rootViewController = baseTabVC;
+    self.window.rootViewController = guideVC;
+    
     
     [self.window makeKeyAndVisible];
     
