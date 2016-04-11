@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Bugly (1.2.9.10)
   - IQKeyboardManager (3.3.0)
   - Masonry (0.6.2)
   - MJExtension (2.5.9)
@@ -36,21 +37,32 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.6.0):
     - MMDrawerController/Core
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
 
 DEPENDENCIES:
   - AFNetworking
+  - Bugly
   - IQKeyboardManager
   - Masonry
   - MJExtension
   - MJRefresh
   - MMDrawerController
+  - ReactiveCocoa
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  Bugly: b3d6b20d87fa5cddb4d928fa829c88a63d518168
   IQKeyboardManager: c87b6600cbfca89d1fe6e8052d936e6c20f65375
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MJExtension: 2330aeb6c83428c820749290bf766e81827cda65
   MJRefresh: 6eb2f61338f89f64fd628fd43debcf479381ff59
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
 COCOAPODS: 0.39.0

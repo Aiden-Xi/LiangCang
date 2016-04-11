@@ -30,8 +30,8 @@
 #import "IQKeyboardManager.h"
 #import "MJRefresh.h"
 #import "BaseViewController.h"
-#import "SLideZoomMenuController.h"
-#import "SettingViewController.h"
+#import "ReactiveCocoa.h"
+#import <Bugly/CrashReporter.h>
 
 #pragma mark - ViewControllers -
 
@@ -45,6 +45,12 @@
 #import "NSString+Tools.h"
 #import "UIButton+TJButtom.h"
 #import "UIImage+Extesion.h"
+
+#pragma mark - 三方库配置
+
+//BugLy配置
+#define kBugLyAppId                       @"900020533"
+
 
 #pragma mark - 系统基础设置 -
 

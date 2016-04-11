@@ -10,4 +10,6 @@
 
 @interface ShareViewController : BaseViewController
 
+@property (nonatomic, strong) UITableView *leftShareTableView;
+
 @end
