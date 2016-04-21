@@ -7,42 +7,51 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseTabBarController.h"
+#import "TAPageControl.h"
 
-#define kAppDelegate                        (AppDelegate *)[UIApplication sharedApplication].delegate
-#define kUserDefaults                       [NSUserDefaults standardUserDefaults]
-#define kScreenBounds                       ([[UIScreen mainScreen] bounds])
-#define kScreenWidth                        ([[UIScreen mainScreen] bounds].size.width)
-#define kScreenHeight                       ([[UIScreen mainScreen] bounds].size.height)
+typedef enum {
+    PageContolAlimentRight,   // 居右
+    PageContolAlimentCenter   // 居中
+} PageContolAliment;
 
-typedef NS_ENUM(NSInteger, GuideType) {
-    FullScreen,           //!<   全屏显示
-    UpAndDown             //!<   上下布局
-};
+typedef enum {
+    PageContolStyleClassic,        // 系统自带经典样式
+    PageContolStyleAnimated,       // 动画效果pagecontrol
+    PageContolStyleNone            // 不显示pagecontrol
+} PageContolStyle;
 
 @protocol YunGuideViewControllerDelegate <NSObject>
 
-- (void)YunGuideLoginButtonClick:(UIButton *)button controller:(id *)controller;
+- (void)YunGuideLoginButtonClick:(UIButton *)button;
 
-- (void)YunGuideSignInButtonClick:(UIButton *)button controller:(id *)controller;
+- (void)YunGuideSignInButtonClick:(UIButton *)button;
 
 @end
 
 @interface YunGuideViewController : UIViewController
 
-/**
- *  引导页样式
- */
-@property (nonatomic, assign) GuideType guideType;
-
-/**
- *  按钮颜色
- */
-@property (nonatomic, strong) UIColor *loginSignButtonColor;
-
-/**
- *  获取引导页图片数组
- */
+// 获取引导页图片数组
 @property (nonatomic, strong) NSArray *imageNameArray;
+
+// 是否显示分页控件
+@property (nonatomic, assign) BOOL showPageControl;
+
+// 分页控件小圆标大小
+@property (nonatomic, assign) CGSize pageControlDotSize;
+
+// 分页控件小圆标颜色
+@property (nonatomic, strong) UIColor *dotColor;
+
+// 分页控制器的样式
+@property (nonatomic, assign) PageContolStyle pageStyle;
+
+// 分页控制器的摆放位置
+@property (nonatomic, assign) PageContolAliment pageAliment;
+
+// 分页控制器
+@property (nonatomic, weak) UIControl *pageControl;
+
+// 代理
+@property (nonatomic, assign) id <YunGuideViewControllerDelegate> delegate;
 
 @end

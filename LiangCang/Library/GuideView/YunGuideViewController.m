@@ -9,14 +9,21 @@
 #import "YunGuideViewController.h"
 #import "UIImage-Helpers.h"
 
-@interface YunGuideViewController () <UIScrollViewDelegate>
+#define kScreenBounds                       ([[UIScreen mainScreen] bounds])
+#define kScreenWidth                        ([[UIScreen mainScreen] bounds].size.width)
+#define kScreenHeight                       ([[UIScreen mainScreen] bounds].size.height)
+#define kButtonWidth                   (kScreenWidth - 60 * 3) / 2
+#define kButtonHeight                  40
 
-@property (nonatomic, strong) UIPageControl *pageControl;
+@interface YunGuideViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
-@end
+@property (nonatomic, strong) UIButton *loginButton;
 
+@property (nonatomic, strong) UIButton *signInButton;
+
+@end
 
 @implementation YunGuideViewController
 
@@ -98,10 +105,17 @@
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     self.navigationController.navigationBarHidden = YES;
     
+    _showPageControl = YES;
+    _pageControlDotSize = CGSizeMake(10, 10);
+    _pageStyle = PageContolStyleAnimated;
+    
     [self createPageView];
 }
 
+#pragma mark - CreateUI -
+
 - (void)createPageView {
+    // 设置scrollView控制器
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     
     _scrollView.contentSize = CGSizeMake(self.imageNameArray.count * kScreenWidth, kScreenHeight);
@@ -114,15 +128,6 @@
     
     [self.view addSubview:_scrollView];
     
-    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake((kScreenWidth - 120) / 2, kScreenHeight - 50, 120, 44)];
-    
-    _pageControl.numberOfPages = _imageNameArray.count;
-    _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
-    _pageControl.currentPageIndicatorTintColor = [UIColor lightGrayColor];
-    _pageControl.currentPage = 0;
-    
-    [self.view addSubview:_pageControl];
-    
     for (int i = 0; i < self.imageNameArray.count; i++) {
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, kScreenHeight)];
@@ -130,19 +135,115 @@
         
         [_scrollView addSubview:imageView];
     }
+    
+    _loginButton = [[UIButton alloc] initWithFrame:CGRectMake(60, kScreenHeight - kButtonHeight - 80, kButtonWidth, kButtonHeight)];
+    
+    
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    //更新UIPageControl的当前页
-    CGPoint offset = scrollView.contentOffset;
-    CGRect bounds = scrollView.frame;
-    [_pageControl setCurrentPage:offset.x / bounds.size.width];
-    [_pageControl sizeForNumberOfPages:offset.x / bounds.size.width];
+#pragma mark - SETTING FUNCTION -
+
+- (void)setPageAliment:(PageContolAliment)pageAliment {
+    _pageAliment = pageAliment;
     
-    if ((offset.x / bounds.size.width) == _imageNameArray.count - 1) {
-        _pageControl.hidden = YES;
+    [self setupPageControl];
+}
+
+- (void)setPageStyle:(PageContolStyle)pageStyle {
+    _pageStyle = pageStyle;
+    
+    [self setupPageControl];
+}
+
+- (void)setupPageControl
+{
+    if (_pageControl) [_pageControl removeFromSuperview]; // 重新加载数据时调整
+    
+    switch (self.pageStyle) {
+        case PageContolStyleAnimated:
+        {
+            TAPageControl *pageControl = [[TAPageControl alloc] init];
+            pageControl.numberOfPages = self.imageNameArray.count;
+            pageControl.dotColor = self.dotColor;
+            
+            [self.view addSubview:pageControl];
+            
+            _pageControl = pageControl;
+            
+            break;
+        }
+            
+        case PageContolStyleClassic:
+        {
+            UIPageControl *pageControl = [[UIPageControl alloc] init];
+            pageControl.numberOfPages = self.imageNameArray.count;
+            pageControl.currentPageIndicatorTintColor = self.dotColor;
+            
+            [self.view addSubview:pageControl];
+            
+            _pageControl = pageControl;
+            
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    CGSize size = CGSizeZero;
+    
+    if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
+        TAPageControl *pageControl = (TAPageControl *)_pageControl;
+        
+        size = [pageControl sizeForNumberOfPages:self.imageNameArray.count];
     } else {
-        _pageControl.hidden = NO;
+        size = CGSizeMake(self.imageNameArray.count * self.pageControlDotSize.width * 1.2, self.pageControlDotSize.height);
+    }
+    
+    CGFloat x = (self.view.frame.size.width - size.width) * 0.5;
+    
+    if (self.pageAliment == PageContolAlimentRight) {
+        x = self.view.frame.size.width - size.width - 10;
+    }
+    
+    CGFloat y = self.view.frame.size.height - size.height - 10;
+    
+    if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
+        TAPageControl *pageControl = (TAPageControl *)_pageControl;
+        [pageControl sizeToFit];
+    }
+    
+    _pageControl.frame = CGRectMake(x, y, size.width, size.height);
+    
+    _pageControl.hidden = !_showPageControl;
+}
+
+- (void)setPageControlDotSize:(CGSize)pageControlDotSize
+{
+    _pageControlDotSize = pageControlDotSize;
+    
+    if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
+        TAPageControl *pageContol = (TAPageControl *)_pageControl;
+        pageContol.dotSize = pageControlDotSize;
+    }
+}
+
+- (void)setShowPageControl:(BOOL)showPageControl
+{
+    _showPageControl = showPageControl;
+    
+    _pageControl.hidden = !showPageControl;
+}
+
+- (void)setDotColor:(UIColor *)dotColor
+{
+    _dotColor = dotColor;
+    if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
+        TAPageControl *pageControl = (TAPageControl *)_pageControl;
+        pageControl.dotColor = dotColor;
+    } else {
+        UIPageControl *pageControl = (UIPageControl *)_pageControl;
+        pageControl.currentPageIndicatorTintColor = dotColor;
     }
 }
 
@@ -150,16 +251,35 @@
     [_scrollView endEditing:YES];
 }
 
-- (void)setGuideType:(GuideType)guideType {
-    _guideType = guideType;
-}
-
-- (void)setLoginSignButtonColor:(UIColor *)loginSignButtonColor {
-    _loginSignButtonColor = loginSignButtonColor;
-}
-
 - (void)setImageNameArray:(NSArray *)imageNameArray {
     _imageNameArray = imageNameArray;
+}
+
+#pragma mark - UIScrollViewDelegate - 
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    //更新UIPageControl的当前页
+    CGPoint offset = scrollView.contentOffset;
+    CGRect bounds = scrollView.frame;
+    
+    if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
+        TAPageControl *pageControl = (TAPageControl *)_pageControl;
+        pageControl.currentPage = (offset.x / bounds.size.width);
+        [pageControl sizeForNumberOfPages:offset.x / bounds.size.width];
+        
+    } else {
+        UIPageControl *pageControl = (UIPageControl *)_pageControl;
+        pageControl.currentPage = (offset.x / bounds.size.width);
+        [pageControl sizeForNumberOfPages:offset.x / bounds.size.width];
+    }
+    
+    if ((offset.x / bounds.size.width) == _imageNameArray.count - 1) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            _pageControl.hidden = YES;
+        });
+    } else {
+        _pageControl.hidden = NO;
+    }
 }
 
 @end

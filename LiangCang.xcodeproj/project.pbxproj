@@ -24,6 +24,11 @@
 		954292841C60F93000CAB837 /* TalentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954292831C60F93000CAB837 /* TalentViewController.m */; };
 		954292861C60FB8E00CAB837 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954292851C60FB8E00CAB837 /* search@2x.png */; };
 		956B0C4B1C59A677003E6859 /* XXYSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 956B0C4A1C59A677003E6859 /* XXYSelectorView.m */; };
+		9589B6E41CC8C75E00965B02 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9589B6DD1CC8C75E00965B02 /* TAAbstractDotView.m */; };
+		9589B6E51CC8C75E00965B02 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9589B6DF1CC8C75E00965B02 /* TAAnimatedDotView.m */; };
+		9589B6E61CC8C75E00965B02 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9589B6E11CC8C75E00965B02 /* TADotView.m */; };
+		9589B6E71CC8C75E00965B02 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9589B6E31CC8C75E00965B02 /* TAPageControl.m */; };
+		9589B6E91CC8CD8E00965B02 /* navigation_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9589B6E81CC8CD8E00965B02 /* navigation_bar_background.png */; };
 		95A94D631CBB8A7500BBBFBE /* YunGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A94D621CBB8A7500BBBFBE /* YunGuideViewController.m */; };
 		95A94D6C1CBB948400BBBFBE /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A94D661CBB948400BBBFBE /* UIImage+Blur.m */; };
 		95A94D6D1CBB948400BBBFBE /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A94D681CBB948400BBBFBE /* UIImage+ImageWithColor.m */; };
@@ -127,6 +132,15 @@
 		954292851C60FB8E00CAB837 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		956B0C491C59A677003E6859 /* XXYSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXYSelectorView.h; sourceTree = "<group>"; };
 		956B0C4A1C59A677003E6859 /* XXYSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXYSelectorView.m; sourceTree = "<group>"; };
+		9589B6DC1CC8C75E00965B02 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		9589B6DD1CC8C75E00965B02 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		9589B6DE1CC8C75E00965B02 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		9589B6DF1CC8C75E00965B02 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		9589B6E01CC8C75E00965B02 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		9589B6E11CC8C75E00965B02 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		9589B6E21CC8C75E00965B02 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		9589B6E31CC8C75E00965B02 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		9589B6E81CC8CD8E00965B02 /* navigation_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_bar_background.png; sourceTree = "<group>"; };
 		95A94D611CBB8A7500BBBFBE /* YunGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunGuideViewController.h; sourceTree = "<group>"; };
 		95A94D621CBB8A7500BBBFBE /* YunGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunGuideViewController.m; sourceTree = "<group>"; };
 		95A94D651CBB948400BBBFBE /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
@@ -348,6 +362,21 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		9589B6DB1CC8C75E00965B02 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				9589B6DC1CC8C75E00965B02 /* TAAbstractDotView.h */,
+				9589B6DD1CC8C75E00965B02 /* TAAbstractDotView.m */,
+				9589B6DE1CC8C75E00965B02 /* TAAnimatedDotView.h */,
+				9589B6DF1CC8C75E00965B02 /* TAAnimatedDotView.m */,
+				9589B6E01CC8C75E00965B02 /* TADotView.h */,
+				9589B6E11CC8C75E00965B02 /* TADotView.m */,
+				9589B6E21CC8C75E00965B02 /* TAPageControl.h */,
+				9589B6E31CC8C75E00965B02 /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		9593A1581C61D9ED0003D3AC /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +388,8 @@
 		95A94D141CBB72CD00BBBFBE /* GuideView */ = {
 			isa = PBXGroup;
 			children = (
+				9589B6E81CC8CD8E00965B02 /* navigation_bar_background.png */,
+				9589B6DB1CC8C75E00965B02 /* PageControl */,
 				95A94D611CBB8A7500BBBFBE /* YunGuideViewController.h */,
 				95A94D621CBB8A7500BBBFBE /* YunGuideViewController.m */,
 			);
@@ -793,6 +824,7 @@
 				953E80A81C71B9B900A6D91F /* image.png in Resources */,
 				F4CE41F11C5A5D070078FBDA /* magazine_tab@2x.png in Resources */,
 				954292711C60793B00CAB837 /* LaunchScreen.png in Resources */,
+				9589B6E91CC8CD8E00965B02 /* navigation_bar_background.png in Resources */,
 				F4CE41FF1C5A5D070078FBDA /* talent_tab_select@2x.png in Resources */,
 				F4CE41FC1C5A5D070078FBDA /* shop_tab.png in Resources */,
 				F45855961CBBEAD00019556F /* 2@3x.png in Resources */,
@@ -883,17 +915,21 @@
 				954292841C60F93000CAB837 /* TalentViewController.m in Sources */,
 				F4CE41A71C5A51FD0078FBDA /* NSDictionary+safeObjectForKey.m in Sources */,
 				95A94D631CBB8A7500BBBFBE /* YunGuideViewController.m in Sources */,
+				9589B6E51CC8C75E00965B02 /* TAAnimatedDotView.m in Sources */,
 				F4EE56FF1C5A505F00700DB4 /* CartViewController.m in Sources */,
 				956B0C4B1C59A677003E6859 /* XXYSelectorView.m in Sources */,
 				F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */,
 				95A94D711CBB952500BBBFBE /* UIImage+Cut.m in Sources */,
 				95A94D6E1CBB948400BBBFBE /* UIImage+Screenshot.m in Sources */,
+				9589B6E41CC8C75E00965B02 /* TAAbstractDotView.m in Sources */,
 				F4E341DE1C4E69EE0094CAF6 /* main.m in Sources */,
 				9542927C1C60F8DA00CAB837 /* ShareViewController.m in Sources */,
+				9589B6E71CC8C75E00965B02 /* TAPageControl.m in Sources */,
 				95A94D6D1CBB948400BBBFBE /* UIImage+ImageWithColor.m in Sources */,
 				F438E20A1C5D0DEB004E37D3 /* AnimatedGIFImageSerialization.m in Sources */,
 				9542926D1C60770D00CAB837 /* LaunchScreenViewController.m in Sources */,
 				F4CE41A81C5A51FD0078FBDA /* NSString+Tools.m in Sources */,
+				9589B6E61CC8C75E00965B02 /* TADotView.m in Sources */,
 				95B35BAA1C58CD120057C143 /* BaseViewController.m in Sources */,
 				F4CE41AA1C5A51FD0078FBDA /* UIView+AddBadge.m in Sources */,
 				95A94D6C1CBB948400BBBFBE /* UIImage+Blur.m in Sources */,
