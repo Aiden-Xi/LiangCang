@@ -79,7 +79,7 @@
                                             <constraint firstAttribute="width" constant="210" id="YAu-YX-Cn3"/>
                                             <constraint firstAttribute="height" constant="22" id="qy5-xX-Nua"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -177,7 +177,7 @@
                                             <constraint firstAttribute="height" constant="22" id="7xe-Y3-kgk"/>
                                             <constraint firstAttribute="width" constant="210" id="wKN-67-LNo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -229,7 +229,7 @@
                                             <constraint firstAttribute="width" constant="40" id="dPk-K9-Wh4"/>
                                             <constraint firstAttribute="height" constant="22" id="k7V-Ms-xp9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -337,7 +337,7 @@
                                             <constraint firstAttribute="width" constant="210" id="BdZ-lc-6Z8"/>
                                             <constraint firstAttribute="height" constant="22" id="iHr-GT-h7u"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -408,7 +408,7 @@
                                             <constraint firstAttribute="width" constant="210" id="a5f-kS-4E3"/>
                                             <constraint firstAttribute="height" constant="22" id="a9X-Hm-ALf"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -471,7 +471,7 @@
                                             <constraint firstAttribute="height" constant="22" id="RNx-vV-pfB"/>
                                             <constraint firstAttribute="width" constant="210" id="rn4-g3-87u"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>

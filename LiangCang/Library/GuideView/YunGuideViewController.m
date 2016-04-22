@@ -154,10 +154,11 @@
     _loginButton.layer.cornerRadius = 3.0;
     _loginButton.layer.masksToBounds = YES;
     _loginButton.hidden = YES;
-    [_loginButton addTarget:self action:@selector(signInButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    
+    [_loginButton addTarget:self
+                     action:@selector(loginButtonClick:)
+           forControlEvents:UIControlEventTouchUpInside];
+
     [self.view addSubview:_loginButton];
-    
 }
 
 #pragma mark - SETTING FUNCTION -
@@ -274,7 +275,12 @@
     _imageNameArray = imageNameArray;
 }
 
-#pragma mark - UIScrollViewDelegate - 
+#pragma mark - UIButton Click -
+
+- (void)loginButtonClick:(UIButton *)sender {
+}
+
+#pragma mark - UIScrollViewDelegate -
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     //更新UIPageControl的当前页
