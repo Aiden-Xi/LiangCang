@@ -280,6 +280,9 @@
 - (void)loginButtonClick:(UIButton *)sender {
 }
 
+- (void)signInButtonClick:(UIButton *)sender {
+}
+
 #pragma mark - UIScrollViewDelegate -
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {

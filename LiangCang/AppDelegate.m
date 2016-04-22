@@ -18,10 +18,13 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+
+{
     /// 注册各种库的使用
     [self startRegisterDefault];
-    
+
     sleep(1.5);
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; // 添加的
@@ -37,10 +40,13 @@
         [defaults synchronize];
         
         YunGuideViewController *guide = [[YunGuideViewController alloc] init];
-        UINavigationController *popNC = [[UINavigationController alloc] initWithRootViewController:guide];
-        
-        guide.imageNameArray = @[@"1", @"2", @"3", @"4"];
+        UINavigationController *popNC =
+            [[UINavigationController alloc] initWithRootViewController:guide];
+
+        guide.imageNameArray = @[ @"1", @"2", @"3", @"4" ];
+
         guide.showPageControl = YES;
+
         guide.dotColor = [UIColor redColor];
         guide.pageStyle = PageContolStyleAnimated;
         guide.pageAliment = PageContolAlimentCenter;
@@ -86,14 +92,17 @@
 /**
  *  一些需要开始注册使用的库
  */
-- (void)startRegisterDefault {
+- (void)startRegisterDefault
+
+{
     /// 需要使用的库，基本的注册（键盘处理库）
     IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
     manager.enable = YES;
+
     manager.shouldResignOnTouchOutside = YES;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = NO;
-    
+
     /// BugLy 配置
     [[CrashReporter sharedInstance] enableLog:YES];
     [[CrashReporter sharedInstance] installWithAppId:kBugLyAppId];
@@ -101,11 +110,15 @@
 
 #pragma mark - YunGuideViewControllerDelegate -
 
-- (void)YunGuideLoginButtonClick:(UIButton *)button {
+- (void)YunGuideLoginButtonClick:(UIButton *)button
+
+{
     NSLog(@"点击登录按钮");
 }
 
-- (void)YunGuideSignInButtonClick:(UIButton *)button {
+- (void)YunGuideSignInButtonClick:(UIButton *)button
+
+{
     NSLog(@"点击注册按钮");
 }
 
