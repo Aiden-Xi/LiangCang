@@ -27,34 +27,34 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; // 添加的
     self.window.backgroundColor = kDefaultBlackColor; // 添加的
     
-    //    NSUserDefaults *defaults = kUserDefaults;
-    //
-    //    NSString *first = [defaults objectForKey:@"isFirst"];
-    //
-    //    if (!first) {
-    //        [defaults setObject:@"yes" forKey:@"isFirst"];
-    //
-    //        [defaults synchronize];
-    //
-    YunGuideViewController *guide = [[YunGuideViewController alloc] init];
-    UINavigationController *popNC = [[UINavigationController alloc] initWithRootViewController:guide];
+    NSUserDefaults *defaults = kUserDefaults;
     
-    guide.imageNameArray = @[@"1", @"2", @"3", @"4"];
-    guide.showPageControl = YES;
-    guide.dotColor = [UIColor redColor];
-    guide.pageStyle = PageContolStyleAnimated;
-    guide.pageAliment = PageContolAlimentCenter;
-    guide.pageControlDotSize = CGSizeMake(10, 10);
-    guide.delegate = self;
+    NSString *first = [defaults objectForKey:@"isFirst"];
     
-    self.window.rootViewController = popNC;
-    //    } else {
-    //        UIStoryboard *mainStoryboard = kStoryBoard(@"Main");
-    //
-    //        BaseTabBarController *baseTabVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"baseTabbarController"];
-    //
-    //        self.window.rootViewController = baseTabVC;
-    //    }
+    if (!first) {
+        [defaults setObject:@"yes" forKey:@"isFirst"];
+        
+        [defaults synchronize];
+        
+        YunGuideViewController *guide = [[YunGuideViewController alloc] init];
+        UINavigationController *popNC = [[UINavigationController alloc] initWithRootViewController:guide];
+        
+        guide.imageNameArray = @[@"1", @"2", @"3", @"4"];
+        guide.showPageControl = YES;
+        guide.dotColor = [UIColor redColor];
+        guide.pageStyle = PageContolStyleAnimated;
+        guide.pageAliment = PageContolAlimentCenter;
+        guide.pageControlDotSize = CGSizeMake(10, 10);
+        guide.delegate = self;
+        
+        self.window.rootViewController = popNC;
+    } else {
+        UIStoryboard *mainStoryboard = kStoryBoard(@"Main");
+        
+        BaseTabBarController *baseTabVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"baseTabbarController"];
+        
+        self.window.rootViewController = baseTabVC;
+    }
     
     [self.window makeKeyAndVisible];
     
@@ -99,7 +99,7 @@
     [[CrashReporter sharedInstance] installWithAppId:kBugLyAppId];
 }
 
-#pragma mark - YunGuideViewControllerDelegate - 
+#pragma mark - YunGuideViewControllerDelegate -
 
 - (void)YunGuideLoginButtonClick:(UIButton *)button {
     NSLog(@"点击登录按钮");

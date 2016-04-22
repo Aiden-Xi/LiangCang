@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9514182B1C72ED9A00B8F07F /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9514182A1C72ED9A00B8F07F /* bg.png */; };
+		951C45E91CC9F97B000F933A /* 华文行楷.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 951C45E81CC9F97B000F933A /* 华文行楷.ttf */; };
+		951C45F21CC9FD20000F933A /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 951C45F11CC9FD20000F933A /* UIFont+AppFont.m */; };
+		951C45F51CC9FD37000F933A /* UILabel+OverrideBaseFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 951C45F41CC9FD37000F933A /* UILabel+OverrideBaseFont.m */; };
+		951C45F81CC9FDF6000F933A /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 951C45F71CC9FDF6000F933A /* Aspects.m */; };
+		951C45FB1CC9FE38000F933A /* UIButton+OverrideBaseFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 951C45FA1CC9FE38000F933A /* UIButton+OverrideBaseFont.m */; };
+		951C47591CC9FE9F000F933A /* UITextField+OverrideBaseFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 951C47581CC9FE9F000F933A /* UITextField+OverrideBaseFont.m */; };
+		951C475F1CC9FF43000F933A /* UITextView+OverrideBaseFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 951C475E1CC9FF43000F933A /* UITextView+OverrideBaseFont.m */; };
 		952170301C5B008600FA73C8 /* MagazineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9521702F1C5B008600FA73C8 /* MagazineViewController.m */; };
 		952170331C5B4FA700FA73C8 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 952170311C5B4FA700FA73C8 /* cart.png */; };
 		952170341C5B4FA700FA73C8 /* cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952170321C5B4FA700FA73C8 /* cart@2x.png */; };
@@ -110,6 +117,19 @@
 		49569D8DE4D0BED16A2EBDF4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		831C2FF701C66DAD790B6ECA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9514182A1C72ED9A00B8F07F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		951C45E81CC9F97B000F933A /* 华文行楷.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "华文行楷.ttf"; sourceTree = "<group>"; };
+		951C45F01CC9FD20000F933A /* UIFont+AppFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFont.h"; sourceTree = "<group>"; };
+		951C45F11CC9FD20000F933A /* UIFont+AppFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFont.m"; sourceTree = "<group>"; };
+		951C45F31CC9FD37000F933A /* UILabel+OverrideBaseFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+OverrideBaseFont.h"; sourceTree = "<group>"; };
+		951C45F41CC9FD37000F933A /* UILabel+OverrideBaseFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+OverrideBaseFont.m"; sourceTree = "<group>"; };
+		951C45F61CC9FDF6000F933A /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		951C45F71CC9FDF6000F933A /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		951C45F91CC9FE38000F933A /* UIButton+OverrideBaseFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+OverrideBaseFont.h"; sourceTree = "<group>"; };
+		951C45FA1CC9FE38000F933A /* UIButton+OverrideBaseFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+OverrideBaseFont.m"; sourceTree = "<group>"; };
+		951C47571CC9FE9F000F933A /* UITextField+OverrideBaseFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+OverrideBaseFont.h"; sourceTree = "<group>"; };
+		951C47581CC9FE9F000F933A /* UITextField+OverrideBaseFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+OverrideBaseFont.m"; sourceTree = "<group>"; };
+		951C475D1CC9FF43000F933A /* UITextView+OverrideBaseFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+OverrideBaseFont.h"; sourceTree = "<group>"; };
+		951C475E1CC9FF43000F933A /* UITextView+OverrideBaseFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+OverrideBaseFont.m"; sourceTree = "<group>"; };
 		9521702E1C5B008600FA73C8 /* MagazineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagazineViewController.h; sourceTree = "<group>"; };
 		9521702F1C5B008600FA73C8 /* MagazineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagazineViewController.m; sourceTree = "<group>"; };
 		952170311C5B4FA700FA73C8 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
@@ -276,6 +296,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		951C45E51CC9BCAD000F933A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				951C45E81CC9F97B000F933A /* 华文行楷.ttf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		951C45EF1CC9FD20000F933A /* SystemFont */ = {
+			isa = PBXGroup;
+			children = (
+				951C45F61CC9FDF6000F933A /* Aspects.h */,
+				951C45F71CC9FDF6000F933A /* Aspects.m */,
+				951C45F01CC9FD20000F933A /* UIFont+AppFont.h */,
+				951C45F11CC9FD20000F933A /* UIFont+AppFont.m */,
+				951C45F31CC9FD37000F933A /* UILabel+OverrideBaseFont.h */,
+				951C45F41CC9FD37000F933A /* UILabel+OverrideBaseFont.m */,
+				951C45F91CC9FE38000F933A /* UIButton+OverrideBaseFont.h */,
+				951C45FA1CC9FE38000F933A /* UIButton+OverrideBaseFont.m */,
+				951C47571CC9FE9F000F933A /* UITextField+OverrideBaseFont.h */,
+				951C47581CC9FE9F000F933A /* UITextField+OverrideBaseFont.m */,
+				951C475D1CC9FF43000F933A /* UITextView+OverrideBaseFont.h */,
+				951C475E1CC9FF43000F933A /* UITextView+OverrideBaseFont.m */,
+			);
+			path = SystemFont;
+			sourceTree = "<group>";
+		};
 		952049271C4F27EC001C4BB3 /* Magazine */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +472,7 @@
 		95BD800B1C55B59B0090D993 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				951C45EF1CC9FD20000F933A /* SystemFont */,
 				95A94D641CBB948400BBBFBE /* UIImage-Helpers */,
 				F4CE419F1C5A51FD0078FBDA /* NSDictionary+safeObjectForKey.h */,
 				F4CE41A01C5A51FD0078FBDA /* NSDictionary+safeObjectForKey.m */,
@@ -614,6 +662,7 @@
 		F4E341DC1C4E69ED0094CAF6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				951C45E51CC9BCAD000F933A /* Resource */,
 				952AD7141C579F7F00BC5DDE /* Images */,
 				F4E341DF1C4E69EE0094CAF6 /* AppDelegate.h */,
 				F4E341E01C4E69EE0094CAF6 /* AppDelegate.m */,
@@ -810,6 +859,7 @@
 				F4CE41F41C5A5D070078FBDA /* personal_tab.png in Resources */,
 				F45855971CBBEAD00019556F /* 3@3x.png in Resources */,
 				952170341C5B4FA700FA73C8 /* cart@2x.png in Resources */,
+				951C45E91CC9F97B000F933A /* 华文行楷.ttf in Resources */,
 				F4CE41FB1C5A5D070078FBDA /* shop_tab_select@2x.png in Resources */,
 				F438E2071C5D0BFF004E37D3 /* LiangCangGIF.gif in Resources */,
 				F4CE41FA1C5A5D070078FBDA /* shop_tab_select.png in Resources */,
@@ -918,12 +968,16 @@
 				9589B6E51CC8C75E00965B02 /* TAAnimatedDotView.m in Sources */,
 				F4EE56FF1C5A505F00700DB4 /* CartViewController.m in Sources */,
 				956B0C4B1C59A677003E6859 /* XXYSelectorView.m in Sources */,
+				951C475F1CC9FF43000F933A /* UITextView+OverrideBaseFont.m in Sources */,
+				951C47591CC9FE9F000F933A /* UITextField+OverrideBaseFont.m in Sources */,
 				F4E341E11C4E69EE0094CAF6 /* AppDelegate.m in Sources */,
 				95A94D711CBB952500BBBFBE /* UIImage+Cut.m in Sources */,
 				95A94D6E1CBB948400BBBFBE /* UIImage+Screenshot.m in Sources */,
 				9589B6E41CC8C75E00965B02 /* TAAbstractDotView.m in Sources */,
 				F4E341DE1C4E69EE0094CAF6 /* main.m in Sources */,
+				951C45F51CC9FD37000F933A /* UILabel+OverrideBaseFont.m in Sources */,
 				9542927C1C60F8DA00CAB837 /* ShareViewController.m in Sources */,
+				951C45F21CC9FD20000F933A /* UIFont+AppFont.m in Sources */,
 				9589B6E71CC8C75E00965B02 /* TAPageControl.m in Sources */,
 				95A94D6D1CBB948400BBBFBE /* UIImage+ImageWithColor.m in Sources */,
 				F438E20A1C5D0DEB004E37D3 /* AnimatedGIFImageSerialization.m in Sources */,
@@ -934,6 +988,8 @@
 				F4CE41AA1C5A51FD0078FBDA /* UIView+AddBadge.m in Sources */,
 				95A94D6C1CBB948400BBBFBE /* UIImage+Blur.m in Sources */,
 				F4CE41AF1C5A520D0078FBDA /* KKNavigationController.m in Sources */,
+				951C45FB1CC9FE38000F933A /* UIButton+OverrideBaseFont.m in Sources */,
+				951C45F81CC9FDF6000F933A /* Aspects.m in Sources */,
 				F4EE56EC1C58FB4400700DB4 /* UIImage+Extesion.m in Sources */,
 				954292801C60F90C00CAB837 /* PersonalViewController.m in Sources */,
 				F4CE41B01C5A520D0078FBDA /* YunButton.m in Sources */,

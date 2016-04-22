@@ -23,6 +23,13 @@
     [super viewDidAppear:animated];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+   
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -129,5 +136,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
 
 @end

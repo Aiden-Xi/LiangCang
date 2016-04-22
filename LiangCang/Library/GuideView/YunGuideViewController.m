@@ -12,7 +12,8 @@
 #define kScreenBounds                       ([[UIScreen mainScreen] bounds])
 #define kScreenWidth                        ([[UIScreen mainScreen] bounds].size.width)
 #define kScreenHeight                       ([[UIScreen mainScreen] bounds].size.height)
-#define kButtonWidth                   (kScreenWidth - 60 * 3) / 2
+#define kButtonSpace                   60
+#define kButtonWidth                   (kScreenWidth - kButtonSpace * 3) / 2
 #define kButtonHeight                  40
 
 @interface YunGuideViewController () <UIScrollViewDelegate>
@@ -136,8 +137,26 @@
         [_scrollView addSubview:imageView];
     }
     
-    _loginButton = [[UIButton alloc] initWithFrame:CGRectMake(60, kScreenHeight - kButtonHeight - 80, kButtonWidth, kButtonHeight)];
+    _signInButton = [[UIButton alloc] initWithFrame:CGRectMake(kButtonSpace, kScreenHeight - kButtonHeight - 80, kButtonWidth, kButtonHeight)];
+    [_signInButton setTitle:@"注册" forState:UIControlStateNormal];
+    [_signInButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    _signInButton.layer.cornerRadius = 3.0;
+    _signInButton.layer.masksToBounds = YES;
+    _signInButton.hidden = YES;
+    [_signInButton addTarget:self action:@selector(signInButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
+    [self.view addSubview:_signInButton];
+    
+    
+    _loginButton = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth - 2 * kButtonSpace - kButtonWidth, kScreenHeight - kButtonHeight - 80, kButtonWidth, kButtonHeight)];
+    [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    [_loginButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    _loginButton.layer.cornerRadius = 3.0;
+    _loginButton.layer.masksToBounds = YES;
+    _loginButton.hidden = YES;
+    [_loginButton addTarget:self action:@selector(signInButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_loginButton];
     
 }
 

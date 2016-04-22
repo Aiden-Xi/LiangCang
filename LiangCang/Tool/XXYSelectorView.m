@@ -28,7 +28,7 @@
             YunButton *selectButton = [[YunButton alloc] initWithFrame:CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight)];
             
             selectButton.tag = i + 1;
-            selectButton.titleLabel.font = kFontSizeFamily(14);
+            selectButton.titleLabel.font = kFontSizeFamily(16);
             
             [selectButton setTitleColor:_titleDefaultColor forState:UIControlStateNormal];
             [selectButton setTitleColor:_titleSelectColor forState:UIControlStateSelected];
@@ -40,7 +40,7 @@
             if (i == _defaultSelect) {
                 selectButton.selected = YES;
                 
-                selectButton.titleLabel.font = kFontSizeFamilyBold(16);
+                selectButton.titleLabel.font = kFontSizeFamily(18);
                 
                 self.selectButton = selectButton;
             }
@@ -71,14 +71,14 @@
     YunButton *button = (YunButton *)_selectButton;
     
     button.selected = NO;
-    button.titleLabel.font = kFontSizeFamily(14);
+    button.titleLabel.font = kFontSizeFamily(16);
     
     UIView *lineView = (UIView *)[self viewWithTag:button.tag * 10];
     lineView.hidden = YES;
     
     // 设置选中的按钮和下划线
     _selectButton = sender;
-    sender.titleLabel.font = kFontSizeFamilyBold(16);
+    sender.titleLabel.font = kFontSizeFamily(18);
     UIView *currentLine = (UIView *)[self viewWithTag:_selectButton.tag * 10];
     currentLine.hidden = NO;
     
