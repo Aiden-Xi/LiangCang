@@ -29,14 +29,12 @@
 
 @implementation KKNavigationController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        self.screenShotsList = [[NSMutableArray alloc] initWithCapacity:2];
-        self.canDragBack = YES;
-        
+#pragma mark 如果使用手动创建代码，这里需要开启， viewdidload方法里面需要屏蔽
+        //        self.screenShotsList = [[NSMutableArray alloc] initWithCapacity:2];
+        //        self.canDragBack = YES;
     }
     return self;
 }
@@ -50,20 +48,25 @@
     
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    self.screenShotsList = [[NSMutableArray alloc] initWithCapacity:2];
+    self.canDragBack = YES;
+
     self.navigationBarHidden = YES;
-    
-    UIImageView *shadowImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"leftside_shadow_bg"]];
+
+    UIImageView *shadowImageView =
+        [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"leftside_shadow_bg"]];
     shadowImageView.frame = CGRectMake(-10, 0, 10, self.view.frame.size.height);
     [self.view addSubview:shadowImageView];
-    
-    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self
-                                                                                action:@selector(paningGestureReceive:)];
+
+    UIPanGestureRecognizer *recognizer =
+        [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                action:@selector(paningGestureReceive:)];
     [recognizer setDelegate:self];
     [recognizer delaysTouchesBegan];
+
     [self.view addGestureRecognizer:recognizer];
 }
 

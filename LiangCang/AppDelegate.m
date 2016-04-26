@@ -19,9 +19,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-
-{
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /// 注册各种库的使用
     [self startRegisterDefault];
 
@@ -43,10 +41,8 @@
         UINavigationController *popNC =
             [[UINavigationController alloc] initWithRootViewController:guide];
 
-        guide.imageNameArray = @[ @"1", @"2", @"3", @"4" ];
-
+        guide.imageNameArray = @[ @"guide1", @"guide2", @"guide3", @"guide4" ];
         guide.showPageControl = YES;
-
         guide.dotColor = [UIColor redColor];
         guide.pageStyle = PageContolStyleAnimated;
         guide.pageAliment = PageContolAlimentCenter;
@@ -92,13 +88,10 @@
 /**
  *  一些需要开始注册使用的库
  */
-- (void)startRegisterDefault
-
-{
+- (void)startRegisterDefault {
     /// 需要使用的库，基本的注册（键盘处理库）
     IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
     manager.enable = YES;
-
     manager.shouldResignOnTouchOutside = YES;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = NO;

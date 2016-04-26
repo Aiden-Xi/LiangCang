@@ -8,9 +8,11 @@
 
 #import "YunGuideViewController.h"
 #import "UIImage-Helpers.h"
+#import "BaseTabBarController.h"
+#import "AppDelegate.h"
 
-#define kScreenBounds                       ([[UIScreen mainScreen] bounds])
-#define kScreenWidth                        ([[UIScreen mainScreen] bounds].size.width)
+#define kScreenBounds ([[UIScreen mainScreen] bounds])
+#define kScreenWidth ([[UIScreen mainScreen] bounds].size.width)
 #define kScreenHeight                       ([[UIScreen mainScreen] bounds].size.height)
 #define kButtonSpace                   60
 #define kButtonWidth                   (kScreenWidth - kButtonSpace * 3) / 2
@@ -300,11 +302,23 @@
         pageControl.currentPage = (offset.x / bounds.size.width);
         [pageControl sizeForNumberOfPages:offset.x / bounds.size.width];
     }
-    
+
     if ((offset.x / bounds.size.width) == _imageNameArray.count - 1) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            _pageControl.hidden = YES;
-        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)),
+                       dispatch_get_main_queue(), ^{
+                           _pageControl.hidden = YES;
+
+                           if (offset.x / bounds.size.width == _imageNameArray.count - 1) {
+                               AppDelegate *appDelegate = kAppDelegate;
+
+                               UIStoryboard *mainStoryboard = kStoryBoard(@"Main");
+
+                               BaseTabBarController *baseTabVC = [mainStoryboard
+                                   instantiateViewControllerWithIdentifier:@"baseTabbarController"];
+
+                               appDelegate.window.rootViewController = baseTabVC;
+                           }
+                       });
     } else {
         _pageControl.hidden = NO;
     }
